@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Budget Estimator | Level & Anvil Solutions | Transparent Pricing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-group">
+                <img src="images/logo.png" alt="Level & Anvil Logo" class="logo-img">
+                <div class="logo-group-text">
+                    <div class="logo-text">LEVEL <span>&</span> ANVIL</div>
+                    <a href="tel:9188846615" class="brand-phone">918-884-6615</a>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="nav-item">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-menu">
+                            <a href="remodels.html">Remodels & Additions</a>
+                            <a href="structural.html">Structural & Water Management</a>
+                            <a href="repairs.html">Skilled Repairs</a>
+                        </div>
+                    </li>
+                    <li><a href="estimator.html" class="active">Estimator</a></li>
+                    <li><a href="service-area.html">Service Area</a></li>
+                    <li class="nav-item">
+                        <a href="about.html">About</a>
+                        <div class="dropdown-menu">
+                            <a href="about.html">Common Philosophy</a>
+                            <a href="reviews.html">Reviews</a>
+                        </div>
+                    </li>
+                    <li><a href="schedule.html" class="btn nav-btn">Schedule a Time</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section section-dark">
+            <div class="container">
+                <div style="max-width: 100px; margin-bottom: 2rem; opacity: 0.5;">
+                    <img src="images/logo.png" alt="Subtle Logo" class="logo-img" style="filter: grayscale(1);">
+                </div>
+                <span class="eyebrow">Calculated Transparency</span>
+                <h1>Project Budget Estimator</h1>
+                <p class="lead">Most homeowners want a realistic starting point before scheduling. This estimator
+                    provides starting ranges for labor and professional coordination.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container" style="max-width: 800px;">
+                <div class="card">
+                    <form id="v41CalcForm" onsubmit="calculateV41Budget(event)">
+                        <div class="form-group" style="margin-bottom: 2rem;">
+                            <label class="form-label"
+                                style="display: block; font-weight: 700; margin-bottom: 0.8rem;">Step 1: Type of
+                                Work</label>
+                            <select id="v41Type" class="form-select"
+                                style="width: 100%; padding: 0.8rem; border-radius: 4px; background: var(--color-bg); color: #FFF; border: 1px solid var(--color-border);">
+                                <option value="repair">Skilled repair or Make-ready</option>
+                                <option value="remodel">Remodel, renovation, or Addition</option>
+                                <option value="structural">Structural concern or Water/Drainage</option>
+                                <option value="other">Not sure</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 2rem;">
+                            <label class="form-label"
+                                style="display: block; font-weight: 700; margin-bottom: 0.8rem;">Step 2: Estimated
+                                Time</label>
+                            <select id="v41Time" class="form-select"
+                                style="width: 100%; padding: 0.8rem; border-radius: 4px; background: var(--color-bg); color: #FFF; border: 1px solid var(--color-border);">
+                                <option value="0">Under 2 hours</option>
+                                <option value="1">Half day (2 to 5 hours)</option>
+                                <option value="2">Full day</option>
+                                <option value="3">2 to 3 days</option>
+                                <option value="4">Multi-phase</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 2rem;">
+                            <label class="form-label"
+                                style="display: block; font-weight: 700; margin-bottom: 0.8rem;">Step 3:
+                                Complexity</label>
+                            <select id="v41Complexity" class="form-select"
+                                style="width: 100%; padding: 0.8rem; border-radius: 4px; background: var(--color-bg); color: #FFF; border: 1px solid var(--color-border);">
+                                <option value="0">Straightforward access, clear scope</option>
+                                <option value="1">Moderate coordination or material sourcing</option>
+                                <option value="2">Technical involvement, hidden conditions, or permitting</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">View
+                            Estimated Range</button>
+                    </form>
+
+                    <div id="v41Result"
+                        style="display: none; margin-top: 3rem; border-top: 2px solid var(--color-primary); padding-top: 2rem; text-align: center;">
+                        <span class="eyebrow">Analysis Complete</span>
+                        <h3>Your Estimated Range</h3>
+                        <h2 id="v41RangeVal" style="color: var(--color-primary); margin-bottom: 1rem;">$0 - $0</h2>
+                        <p id="v41RangeDesc"
+                            style="color: var(--color-text-dim); margin-bottom: 3rem; font-size: 1rem;">Based on similar
+                            projects, this type of work usually falls within the range shown above. If that range feels
+                            reasonable, the next step is to schedule a time to dial in your project.</p>
+
+                        <div
+                            style="background: var(--color-surface); padding: 2.5rem; border-radius: var(--radius-md);">
+                            <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+                                <a href="schedule.html" class="btn btn-primary" style="width: 100%;">Schedule a Time</a>
+                                <label class="btn btn-outline" style="width: 100%; cursor: pointer;">
+                                    Upload Photos <input type="file" style="display:none;">
+                                </label>
+                            </div>
+                            <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--color-text-dim);">If photos
+                                are available, they help us give you a more detailed response.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const tiers = [
+            { min: 200, max: 500 },     // 0: Under 2h
+            { min: 300, max: 750 },     // 1: Half day
+            { min: 500, max: 2000 },    // 2: Full day
+            { min: 2000, max: 10000 },  // 3: 2-3 days
+            { min: 10000, max: 50000 }  // 4: Multi
+        ];
+
+        function calculateV41Budget(e) {
+            e.preventDefault();
+            const timeLevel = parseInt(document.getElementById('v41Time').value);
+            const complexity = parseInt(document.getElementById('v41Complexity').value);
+            const type = document.getElementById('v41Type').value;
+
+            let finalMin, finalMax;
+            const base = tiers[timeLevel];
+
+            // Soft Logic: Moderate complexity (1) stretches within tier
+            // Tier jump (2) only if specific conditions met
+            if (complexity === 0) {
+                finalMin = base.min;
+                finalMax = base.max;
+            } else if (complexity === 1) {
+                // Stretch: Increase max by 25% but keep in tier baseline
+                finalMin = base.min + (base.min * 0.1);
+                finalMax = base.max + (base.max * 0.2);
+            } else {
+                // Tier Jump: only if Structural or Remodel AND complexity is 2
+                if (type === 'structural' || type === 'remodel') {
+                    const nextBase = tiers[Math.min(timeLevel + 1, 4)];
+                    finalMin = nextBase.min;
+                    finalMax = nextBase.max;
+                } else {
+                    // Simple stretch for repairs
+                    finalMin = base.min + (base.min * 0.2);
+                    finalMax = base.max + (base.max * 0.4);
+                }
+            }
+
+            const displayRange = document.getElementById('v41RangeVal');
+            if (timeLevel === 4 || (timeLevel === 3 && complexity === 2)) {
+                displayRange.innerText = "$" + Math.round(finalMin).toLocaleString() + "+";
+            } else {
+                displayRange.innerText = "$" + Math.round(finalMin).toLocaleString() + " — $" + Math.round(finalMax).toLocaleString();
+            }
+
+            document.getElementById('v41Result').style.display = 'block';
+            window.scrollTo({ top: document.getElementById('v41Result').offsetTop - 100, behavior: 'smooth' });
+        }
+    </script>
+
+    <!-- MOBILE STICKY CTA -->
+    <div class="mobile-conversion-bar">
+        <a href="schedule.html" class="btn btn-primary" style="width: 100%;">Schedule a Time</a>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Level & Anvil Solutions. Serving Tulsa and Green Country.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
