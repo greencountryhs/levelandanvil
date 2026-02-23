@@ -203,6 +203,64 @@ ul {
     color: var(--color-primary);
 }
 
+/* Hamburger Menu Icon */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-text);
+    transition: var(--transition);
+}
+
+/* Mobile Drawer */
+.mobile-nav-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: var(--color-bg);
+    z-index: 1050;
+    padding: 100px 5% 40px 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+}
+
+.mobile-nav-drawer.active {
+    right: 0;
+}
+
+.mobile-nav-drawer a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+}
+
+.mobile-nav-drawer .sub-items {
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: -1rem;
+}
+
+.mobile-nav-drawer .sub-items a {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--color-text-dim);
+}
+
 /* Typography */
 .eyebrow {
     display: block;
@@ -313,11 +371,21 @@ h3 {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: var(--color-surface);
-    padding: 1rem;
+    background: var(--color-primary);
+    padding: 0.8rem;
     z-index: 1001;
-    border-top: 1px solid var(--color-border);
+    text-align: center;
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-conversion-bar .btn-sticky {
+    color: #000;
+    font-weight: 800;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    width: 100%;
 }
 
 /* Card */

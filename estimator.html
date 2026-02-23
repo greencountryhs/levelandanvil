@@ -10,6 +10,25 @@
 
 <body>
 
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <div class="sub-items">
+                <a href="remodels.html">Remodels & Additions</a>
+                <a href="structural.html">Structural & Water</a>
+                <a href="repairs.html">Skilled Repairs</a>
+            </div>
+            <a href="estimator.html">Estimator</a>
+            <a href="service-area.html">Service Area</a>
+            <a href="about.html">About</a>
+            <div class="sub-items">
+                <a href="reviews.html">Reviews</a>
+            </div>
+            <a href="schedule.html" class="btn btn-primary" style="margin-top: 1rem;">Schedule a Time</a>
+        </nav>
+    </div>
+
     <header class="site-header">
         <div class="container header-inner">
             <div class="logo-group">
@@ -42,6 +61,11 @@
                     <li><a href="schedule.html" class="btn nav-btn">Schedule a Time</a></li>
                 </ul>
             </nav>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -109,7 +133,7 @@
                         style="display: none; margin-top: 3rem; border-top: 2px solid var(--color-primary); padding-top: 2rem; text-align: center;">
                         <span class="eyebrow">Analysis Complete</span>
                         <h3>Your Estimated Range</h3>
-                        <h2 id="v41RangeVal" style="color: var(--color-primary); margin-bottom: 1rem;">$0 - $0</h2>
+                        <h2 id="v41RangeVal" style="color: var(--color-primary); margin-bottom: 1.5rem;">$0 - $0</h2>
                         <p id="v41RangeDesc"
                             style="color: var(--color-text-dim); margin-bottom: 3rem; font-size: 1rem;">Based on similar
                             projects, this type of work usually falls within the range shown above. If that range feels
@@ -156,19 +180,19 @@
                 finalMin = base.min;
                 finalMax = base.max;
             } else if (complexity === 1) {
-                // Stretch: Increase max by 25% but keep in tier baseline
-                finalMin = base.min + (base.min * 0.1);
-                finalMax = base.max + (base.max * 0.2);
+                // Soft Logic: Moderate complexity spans current tier rather than jumping
+                finalMin = base.min + (base.min * 0.15);
+                finalMax = base.max + (base.max * 0.15);
             } else {
-                // Tier Jump: only if Structural or Remodel AND complexity is 2
-                if (type === 'structural' || type === 'remodel') {
+                // Tier Jump: ONLY if structural AND high complexity
+                if (type === 'structural' && complexity === 2) {
                     const nextBase = tiers[Math.min(timeLevel + 1, 4)];
                     finalMin = nextBase.min;
                     finalMax = nextBase.max;
                 } else {
-                    // Simple stretch for repairs
-                    finalMin = base.min + (base.min * 0.2);
-                    finalMax = base.max + (base.max * 0.4);
+                    // Maximum stretch for other high-complexity items
+                    finalMin = base.min + (base.min * 0.25);
+                    finalMax = base.max + (base.max * 0.35);
                 }
             }
 
@@ -182,16 +206,67 @@
             document.getElementById('v41Result').style.display = 'block';
             window.scrollTo({ top: document.getElementById('v41Result').offsetTop - 100, behavior: 'smooth' });
         }
+
+        // Mobile Nav Trigger
+        const navToggle = document.getElementById('navToggle');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+
+        navToggle.addEventListener('click', () => {
+            mobileDrawer.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.mobile-nav-drawer a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileDrawer.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
     </script>
 
     <!-- MOBILE STICKY CTA -->
     <div class="mobile-conversion-bar">
-        <a href="schedule.html" class="btn btn-primary" style="width: 100%;">Schedule a Time</a>
+        <a href="schedule.html" class="btn-sticky">Schedule a Time</a>
     </div>
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2026 Level & Anvil Solutions. Serving Tulsa and Green Country.</p>
+            <div class="footer-map">
+                <div class="footer-col">
+                    <img src="images/logo.png" alt="Level & Anvil Logo" class="logo-img-footer">
+                    <p style="font-size: 0.95rem;">Level & Anvil provides practical residential solutions across Tulsa
+                        and Green Country.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="remodels.html">Remodels & Additions</a></li>
+                        <li><a href="structural.html">Structural & Water</a></li>
+                        <li><a href="repairs.html">Skilled Repairs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Tools</h4>
+                    <ul class="footer-links">
+                        <li><a href="estimator.html" class="active">Budget Estimator</a></li>
+                        <li><a href="schedule.html">Schedule a Time</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="service-area.html">Service Area</a></li>
+                        <li>Call or Text: 918-884-6615</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="margin-bottom: 1.5rem; color: var(--color-primary); font-weight: 600;">Serving Tulsa and Green
+                    Country including Broken Arrow, Jenks, Bixby, Owasso, Grove, Afton, Jay, and Vinita.</p>
+                &copy; 2026 Level & Anvil Solutions. Structured Residential Authority.
+            </div>
         </div>
     </footer>
 

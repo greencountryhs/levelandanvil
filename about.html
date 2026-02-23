@@ -10,6 +10,25 @@
 
 <body>
 
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <div class="sub-items">
+                <a href="remodels.html">Remodels & Additions</a>
+                <a href="structural.html">Structural & Water</a>
+                <a href="repairs.html">Skilled Repairs</a>
+            </div>
+            <a href="estimator.html">Estimator</a>
+            <a href="service-area.html">Service Area</a>
+            <a href="about.html" class="active">About</a>
+            <div class="sub-items">
+                <a href="reviews.html">Reviews</a>
+            </div>
+            <a href="schedule.html" class="btn btn-primary" style="margin-top: 1rem;">Schedule a Time</a>
+        </nav>
+    </div>
+
     <header class="site-header">
         <div class="container header-inner">
             <div class="logo-group">
@@ -42,6 +61,11 @@
                     <li><a href="schedule.html" class="btn nav-btn">Schedule a Time</a></li>
                 </ul>
             </nav>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -78,14 +102,66 @@
 
     <!-- MOBILE STICKY CTA -->
     <div class="mobile-conversion-bar">
-        <a href="schedule.html" class="btn btn-primary" style="width: 100%;">Schedule a Time</a>
+        <a href="schedule.html" class="btn-sticky">Schedule a Time</a>
     </div>
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2026 Level & Anvil Solutions. Structured Residential Authority.</p>
+            <div class="footer-map">
+                <div class="footer-col">
+                    <img src="images/logo.png" alt="Level & Anvil Logo" class="logo-img-footer">
+                    <p style="font-size: 0.95rem;">Level & Anvil provides practical residential solutions across Tulsa
+                        and Green Country.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="remodels.html">Remodels & Additions</a></li>
+                        <li><a href="structural.html">Structural & Water</a></li>
+                        <li><a href="repairs.html">Skilled Repairs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Tools</h4>
+                    <ul class="footer-links">
+                        <li><a href="estimator.html">Budget Estimator</a></li>
+                        <li><a href="schedule.html">Schedule a Time</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="active">About</a></li>
+                        <li><a href="service-area.html">Service Area</a></li>
+                        <li>Call or Text: 918-884-6615</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="margin-bottom: 1.5rem; color: var(--color-primary); font-weight: 600;">Serving Tulsa and Green
+                    Country including Broken Arrow, Jenks, Bixby, Owasso, Grove, Afton, Jay, and Vinita.</p>
+                &copy; 2026 Level & Anvil Solutions. Structured Residential Authority.
+            </div>
         </div>
     </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+
+        navToggle.addEventListener('click', () => {
+            mobileDrawer.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.mobile-nav-drawer a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileDrawer.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 
