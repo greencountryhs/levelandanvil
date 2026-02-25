@@ -1,50 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Budget Estimator | Level & Anvil Solutions | Transparent Pricing</title>
+    <title>Project Estimator | Realistic Planning Ranges | Level & Anvil Tulsa</title>
+    <meta name="description"
+        content="Use our Project Estimator to see typical investment ranges for repairs and renovations in Tulsa. Realistic planning for labor and materials.">
     <link rel="stylesheet" href="styles.css">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Level & Anvil Solutions",
-      "image": "https://levelandanvil.com/images/logo.png",
-      "@id": "https://levelandanvil.com",
-      "url": "https://levelandanvil.com",
-      "telephone": "918-884-6615",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Tulsa",
-        "addressRegion": "OK",
-        "postalCode": "74101",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 36.1539,
-        "longitude": -95.9928
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "08:00",
-        "closes": "18:00"
-      },
-      "sameAs": [
-        "https://www.facebook.com/LevelAndAnvil"
-      ]
-    }
-    </script>
 </head>
 
 <body>
@@ -60,7 +23,11 @@
                     <a href="remodels.html">Remodels & Additions</a>
                     <a href="structural.html">Structural & Water</a>
                     <a href="repairs.html">Skilled Repairs</a>
+                    <a href="renovation-consultation.html">Renovation Consultation</a>
                 </div>
+            </div>
+            <div class="nav-group">
+                <a href="process.html">Our Process</a>
             </div>
             <div class="nav-group">
                 <a href="estimator.html" class="active">Free Estimate</a>
@@ -96,10 +63,11 @@
                             <a href="remodels.html">Remodels & Additions</a>
                             <a href="structural.html">Structural & Water Management</a>
                             <a href="repairs.html">Skilled Repairs</a>
+                            <a href="renovation-consultation.html">Renovation Consultation</a>
                         </div>
                     </li>
-                    <li><a href="estimator.html" class="active">Free Estimate</a></li>
-                    <li><a href="service-area.html">Service Area</a></li>
+                    <li><a href="process.html">Process</a></li>
+                    <li><a href="estimator.html" class="btn btn-brand" style="padding: 0.6rem 1.2rem !important; margin-left: 0.5rem;">Free Estimate</a></li>
                     <li class="nav-item">
                         <a href="about.html">About</a>
                         <div class="dropdown-menu">
@@ -107,7 +75,7 @@
                             <a href="reviews.html">Reviews</a>
                         </div>
                     </li>
-                    <li><a href="schedule.html" class="btn nav-btn">Schedule an Evaluation</a></li>
+                    <li><a href="schedule.html" class="btn btn-primary" style="padding: 0.6rem 1.2rem !important;">Schedule an Evaluation</a></li>
                 </ul>
             </nav>
             <div class="nav-toggle" id="navToggle">
@@ -119,85 +87,104 @@
     </header>
 
     <main>
-        <section class="section section-dark">
-            <div class="container">
-                <div style="max-width: 100px; margin-bottom: 2rem; opacity: 0.5;">
-                    <img src="images/logo.png" alt="Subtle Logo" class="logo-img" style="filter: grayscale(1);">
-                </div>
-                <span class="eyebrow">Calculated Transparency</span>
-                <h1>Project Budget Estimator</h1>
-                <p class="lead">Most homeowners want a realistic starting point before scheduling. This estimator
-                    provides starting ranges for labor and professional coordination.</p>
+        <section class="section section-dark" style="padding-bottom: 2rem;">
+            <div class="container" style="text-align: center;">
+                <span class="eyebrow">Project Planning</span>
+                <h1>Project Estimator</h1>
+                <p class="lead" style="margin-left: auto; margin-right: auto; max-width: 700px;">Get a realistic investment range for your project. Our estimates include labor + typical materials based on current Tulsa market rates.</p>
             </div>
         </section>
 
         <section class="section">
-            <div class="container" style="max-width: 800px;">
-                <div class="card">
-                    <form id="v41CalcForm" onsubmit="calculateV41Budget(event)">
-                        <div class="form-group" style="margin-bottom: 2rem;">
-                            <label class="form-label"
-                                style="display: block; font-weight: 700; margin-bottom: 0.8rem;">Step 1: Type of
-                                Work</label>
-                            <select id="v41Type" class="form-select"
-                                style="width: 100%; padding: 0.8rem; border-radius: 4px; background: var(--color-bg); color: #FFF; border: 1px solid var(--color-border);">
-                                <option value="repair">Skilled repair or Make-ready</option>
-                                <option value="remodel">Remodel, renovation, or Addition</option>
-                                <option value="structural">Structural concern or Water/Drainage</option>
-                                <option value="other">Not sure</option>
+            <div class="container">
+                <!-- STEP 1: PATH SELECTION -->
+                <div id="pathSelection">
+                    <div style="text-align: center; margin-bottom: 3rem;">
+                        <span class="eyebrow">Step 1</span>
+                        <h3>What best describes your project?</h3>
+                    </div>
+                    <div class="estimator-paths">
+                        <div class="path-card" onclick="selectPath('repair')">
+                            <span class="path-icon">🛠️</span>
+                            <h3>Focused Repairs & Improvements</h3>
+                            <p>Defined repairs and upgrades, from small smart fixes to multi-day improvements.</p>
+                        </div>
+                        <div class="path-card" onclick="selectPath('renovation')">
+                            <span class="path-icon">🏗️</span>
+                            <h3>Renovation & Structural Projects</h3>
+                            <p>Layout changes, structural work, or multi-system updates requiring trade coordination and permitting.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 2: FORM SECTION -->
+                <div id="estimatorFormSection">
+                    <div style="text-align: center; margin-bottom: 3rem;">
+                        <span class="eyebrow">Step 2</span>
+                        <h3 id="formTitle">Project Details</h3>
+                        <p id="formIntro" style="max-width: 600px; margin: 1rem auto; opacity: 0.8;"></p>
+                    </div>
+
+                    <form id="dualEstimatorForm" onsubmit="calculateRange(event)" class="card" style="max-width: 800px; margin: 0 auto;">
+                        <div class="form-group" id="repairOptions" style="display:none;">
+                            <label>What best describes your need?</label>
+                            <select id="repairType" class="form-control">
+                                <option value="targeted">Targeted repair</option>
+                                <option value="door-window">Door/window installation</option>
+                                <option value="drainage">Drainage correction</option>
+                                <option value="structural">Structural stabilization (localized)</option>
+                                <option value="carpentry">Finish carpentry</option>
+                                <option value="exterior">Exterior repair</option>
+                                <option value="other">Other defined-scope work</option>
                             </select>
                         </div>
 
-                        <div class="form-group" style="margin-bottom: 2rem;">
-                            <label class="form-label"
-                                style="display: block; font-weight: 700; margin-bottom: 0.8rem;">Step 2: Estimated
-                                Time</label>
-                            <select id="v41Time" class="form-select"
-                                style="width: 100%; padding: 0.8rem; border-radius: 4px; background: var(--color-bg); color: #FFF; border: 1px solid var(--color-border);">
-                                <option value="0">Under 2 hours</option>
-                                <option value="1">Half day (2 to 5 hours)</option>
-                                <option value="2">Full day</option>
-                                <option value="3">2 to 3 days</option>
-                                <option value="4">Multi-phase</option>
+                        <div class="form-group" id="renovationOptions" style="display:none;">
+                            <label>Project Type</label>
+                            <select id="renovationType" class="form-control">
+                                <option value="kitchen">Kitchen modernizations</option>
+                                <option value="structural-mod">Load-bearing modifications</option>
+                                <option value="multi-room">Multi-room reconfiguration</option>
+                                <option value="historic">Historic restoration</option>
+                                <option value="whole-home">Whole-home updates</option>
+                                <option value="drain-struct">Drainage + structural correction</option>
                             </select>
                         </div>
 
-                        <div class="form-group" style="margin-bottom: 2rem;">
-                            <label class="form-label"
-                                style="display: block; font-weight: 700; margin-bottom: 0.8rem;">Step 3:
-                                Complexity</label>
-                            <select id="v41Complexity" class="form-select"
-                                style="width: 100%; padding: 0.8rem; border-radius: 4px; background: var(--color-bg); color: #FFF; border: 1px solid var(--color-border);">
-                                <option value="0">Straightforward access, clear scope</option>
-                                <option value="1">Moderate coordination or material sourcing</option>
-                                <option value="2">Technical involvement, hidden conditions, or permitting</option>
+                        <div class="form-group">
+                            <label id="levelLabel">Current Stage</label>
+                            <select id="projectStage" class="form-control">
+                                <!-- Options dynamically injected -->
                             </select>
                         </div>
 
-                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">View
-                            Estimated Range</button>
+                        <div class="form-group">
+                            <label>Expected Investment Tier</label>
+                            <select id="budgetTier" class="form-control">
+                                <!-- Options dynamically injected -->
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Calculate Planning Range</button>
                     </form>
 
-                    <div id="v41Result"
-                        style="display: none; margin-top: 3rem; border-top: 2px solid var(--color-primary); padding-top: 2rem; text-align: center;">
+                    <!-- RESULTS -->
+                    <div id="estimatorResult" style="display: none; margin-top: 4rem; border-top: 2px solid var(--color-primary); padding-top: 3rem; text-align: center; animation: fadeIn 0.6s ease-out;">
                         <span class="eyebrow">Analysis Complete</span>
-                        <h3>Your Estimated Range</h3>
-                        <h2 id="v41RangeVal" style="color: var(--color-primary); margin-bottom: 1.5rem;">$0 - $0</h2>
-                        <p id="v41RangeDesc"
-                            style="color: var(--color-text-dim); margin-bottom: 3rem; font-size: 1rem;">Based on similar
-                            projects, this type of work usually falls within the range shown above. If that range feels
-                            reasonable, the next step is to Schedule an Evaluation to dial in your project.</p>
+                        <h3>Estimated Planning Range</h3>
+                        <h2 id="rangeVal" style="color: var(--color-primary); margin-bottom: 1rem; font-size: 3.5rem;">$0 - $0</h2>
+                        <p id="rangeOutputLabel" style="font-weight: 700; color: #FFF; margin-bottom: 1rem;"></p>
+                        <p id="rangeDisclaimer" style="color: var(--color-text-dim); margin-bottom: 3rem; font-size: 1rem; max-width: 600px; margin-left: auto; margin-right: auto;"></p>
 
-                        <div
-                            style="background: var(--color-surface); padding: 2.5rem; border-radius: var(--radius-md);">
+                        <div style="background: var(--color-surface); padding: 3rem; border-radius: var(--radius-md); max-width: 600px; margin: 0 auto;">
+                            <h4>Next: Technical Diagnosis</h4>
+                            <p style="margin-bottom: 2rem; opacity: 0.8;">If this range aligns with your expectations, the next step is a professional evaluation to define exact scope.</p>
                             <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
                                 <a href="schedule.html" class="btn btn-primary" style="width: 100%;">Schedule an Evaluation</a>
                                 <label class="btn btn-outline" style="width: 100%; cursor: pointer;">
                                     Upload Photos <input type="file" style="display:none;">
                                 </label>
                             </div>
-                            <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--color-text-dim);">If photos
-                                are available, they help us give you a more detailed response.</p>
                         </div>
                     </div>
                 </div>
@@ -206,70 +193,106 @@
     </main>
 
     <script>
-        const tiers = [
-            { min: 200, max: 500 },     // 0: Under 2h
-            { min: 300, max: 750 },     // 1: Half day
-            { min: 500, max: 2000 },    // 2: Full day
-            { min: 2000, max: 10000 },  // 3: 2-3 days
-            { min: 10000, max: 50000 }  // 4: Multi
-        ];
+        let currentPath = '';
 
-        function calculateV41Budget(e) {
-            e.preventDefault();
-            const timeLevel = parseInt(document.getElementById('v41Time').value);
-            const complexity = parseInt(document.getElementById('v41Complexity').value);
-            const type = document.getElementById('v41Type').value;
+        const stages = {
+            repair: [
+                { val: 'known', label: 'Known scope' },
+                { val: 'diagnose', label: 'Problem diagnosis needed' },
+                { val: 'partial', label: 'Partial scope, refine' }
+            ],
+            renovation: [
+                { val: 'concept', label: 'Concept stage' },
+                { val: 'planning', label: 'Budget planning' },
+                { val: 'scope', label: 'Ready for scope definition' },
+                { val: 'const', label: 'Ready for construction' }
+            ]
+        };
 
-            let finalMin, finalMax;
-            const base = tiers[timeLevel];
+        const tiers = {
+            repair: [
+                { val: 't1', label: 'Under $2,500', min: 900, max: 2800 },
+                { val: 't2', label: '$2,500 – $7,500', min: 3000, max: 8900 },
+                { val: 't3', label: '$7,500 – $15,000', min: 8000, max: 16500 },
+                { val: 't4', label: '$15,000+', min: 15000, max: 25000 }
+            ],
+            renovation: [
+                { val: 'r1', label: '$10,000 – $25,000', min: 12500, max: 30000 },
+                { val: 'r2', label: '$25,000 – $50,000', min: 30000, max: 60000 },
+                { val: 'r3', label: '$50,000 – $75,000', min: 60000, max: 90000 },
+                { val: 'r4', label: '$75,000 – $125,000', min: 90000, max: 150000 },
+                { val: 'r5', label: '$125,000+', min: 150000, max: 0 }
+            ]
+        };
 
-            // Soft Logic: Moderate complexity (1) stretches within tier
-            // Tier jump (2) only if specific conditions met
-            if (complexity === 0) {
-                finalMin = base.min;
-                finalMax = base.max;
-            } else if (complexity === 1) {
-                // Soft Logic: Moderate complexity spans current tier rather than jumping
-                finalMin = base.min + (base.min * 0.15);
-                finalMax = base.max + (base.max * 0.15);
+        function selectPath(path) {
+            currentPath = path;
+            document.querySelectorAll('.path-card').forEach(c => c.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            const section = document.getElementById('estimatorFormSection');
+            const intro = document.getElementById('formIntro');
+            const repairOps = document.getElementById('repairOptions');
+            const renovOps = document.getElementById('renovationOptions');
+            
+            section.style.display = 'block';
+            
+            if (path === 'repair') {
+                intro.innerText = "This estimator is for defined repairs and upgrades, from small smart fixes to multi-day improvements.";
+                repairOps.style.display = 'block';
+                renovOps.style.display = 'none';
             } else {
-                // Tier Jump: ONLY if structural AND high complexity
-                if (type === 'structural' && complexity === 2) {
-                    const nextBase = tiers[Math.min(timeLevel + 1, 4)];
-                    finalMin = nextBase.min;
-                    finalMax = nextBase.max;
-                } else {
-                    // Maximum stretch for other high-complexity items
-                    finalMin = base.min + (base.min * 0.25);
-                    finalMax = base.max + (base.max * 0.35);
-                }
+                intro.innerText = "For projects involving layout changes, structural work, or multi-zone renovation that require trade coordination, permitting, and sequencing.";
+                repairOps.style.display = 'none';
+                renovOps.style.display = 'block';
             }
 
-            const displayRange = document.getElementById('v41RangeVal');
-            if (timeLevel === 4 || (timeLevel === 3 && complexity === 2)) {
-                displayRange.innerText = "$" + Math.round(finalMin).toLocaleString() + "+";
-            } else {
-                displayRange.innerText = "$" + Math.round(finalMin).toLocaleString() + " — $" + Math.round(finalMax).toLocaleString();
-            }
+            // Populate Stage
+            const stageSelect = document.getElementById('projectStage');
+            stageSelect.innerHTML = stages[path].map(s => `<option value="${s.val}">${s.label}</option>`).join('');
 
-            document.getElementById('v41Result').style.display = 'block';
-            window.scrollTo({ top: document.getElementById('v41Result').offsetTop - 100, behavior: 'smooth' });
+            // Populate Tiers
+            const tierSelect = document.getElementById('budgetTier');
+            tierSelect.innerHTML = tiers[path].map(t => `<option value="${t.val}">${t.label}</option>`).join('');
+
+            document.getElementById('estimatorResult').style.display = 'none';
+            window.scrollTo({ top: section.offsetTop - 50, behavior: 'smooth' });
         }
 
-        // Mobile Nav Trigger
+        function calculateRange(e) {
+            e.preventDefault();
+            const tierVal = document.getElementById('budgetTier').value;
+            const pathTiers = tiers[currentPath];
+            const selectedTier = pathTiers.find(t => t.val === tierVal);
+            
+            const displayRange = document.getElementById('rangeVal');
+            const outputLabel = document.getElementById('rangeOutputLabel');
+            const disclaimer = document.getElementById('rangeDisclaimer');
+
+            if (selectedTier.max === 0) {
+                displayRange.innerText = "$" + selectedTier.min.toLocaleString() + "+";
+            } else {
+                displayRange.innerText = "$" + selectedTier.min.toLocaleString() + " - $" + selectedTier.max.toLocaleString();
+            }
+
+            if (currentPath === 'repair') {
+                outputLabel.innerText = "Ranges include labor + typical materials.";
+                disclaimer.innerText = "Final pricing determined after scope evaluation. Complex or historic conditions may affect these ranges.";
+            } else {
+                outputLabel.innerText = "Ranges include materials + labor and typical trade coordination.";
+                disclaimer.innerText = "Final pricing requires defined scope, technical planning, and material selection. These ranges represent typical Tulsa investments for this project type.";
+            }
+
+            document.getElementById('estimatorResult').style.display = 'block';
+            window.scrollTo({ top: document.getElementById('estimatorResult').offsetTop - 100, behavior: 'smooth' });
+        }
+
+        // Mobile Nav
         const navToggle = document.getElementById('navToggle');
         const mobileDrawer = document.getElementById('mobileDrawer');
-
         navToggle.addEventListener('click', () => {
             mobileDrawer.classList.toggle('active');
             navToggle.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.mobile-nav-drawer a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileDrawer.classList.remove('active');
-                navToggle.classList.remove('active');
-            });
         });
     </script>
 
@@ -280,8 +303,8 @@
 
     <footer class="site-footer">
         <div class="container">
-                        <!-- GLOBAL FOOTER LEAD FORM -->
-            <div class="footer-cta-form">
+            <!-- GLOBAL FOOTER LEAD FORM -->
+            <div class="footer-cta-form" id="leadForm">
                 <span class="eyebrow">Contact</span>
                 <h3>Request an Evaluation</h3>
                 <p>Tell us about your project and we will reach out to schedule a technical diagnosis.</p>
@@ -297,8 +320,7 @@
             <div class="footer-map">
                 <div class="footer-col">
                     <img src="images/logo.png" alt="Level & Anvil Logo" class="logo-img-footer">
-                    <p style="font-size: 0.95rem;">Level & Anvil provides practical residential solutions across Tulsa
-                        and Green Country.</p>
+                    <p style="font-size: 0.95rem;">Level & Anvil provides practical residential solutions across Tulsa and Green Country.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Services</h4>
@@ -306,40 +328,35 @@
                         <li><a href="remodels.html">Remodels & Additions</a></li>
                         <li><a href="structural.html">Structural & Water</a></li>
                         <li><a href="repairs.html">Skilled Repairs</a></li>
+                        <li><a href="renovation-consultation.html">Renovation Consultation</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Tools</h4>
+                    <h4>Internal</h4>
                     <ul class="footer-links">
-                        <li><a href="estimator.html" class="active">Budget Free Estimate</a></li>
-                        <li><a href="schedule.html">Schedule an Evaluation</a></li>
+                        <li><a href="process.html">Our Process</a></li>
+                        <li><a href="estimator.html" class="active">Project Estimator</a></li>
                         <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="service-area.html">Service Area</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Company</h4>
                     <ul class="footer-links">
                         <li><a href="about.html">About</a></li>
-                        <li><a href="service-area.html">Service Area</a></li>
+                        <li><a href="https://tulsaareaforestschool.org" target="_blank">Forest School</a></li>
                         <li>Call or Text: 918-884-6615</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p style="margin-bottom: 1.5rem; color: var(--color-primary); font-weight: 600;">Serving Tulsa and Green
-                    Country including Broken Arrow, Jenks, Bixby, Owasso, Grove, Afton, Jay, and Vinita.</p>
+                <p style="margin-bottom: 1.5rem; color: var(--color-primary); font-weight: 600;">Serving Tulsa and Green Country including Broken Arrow, Jenks, Bixby, Owasso, Grove, Afton, Jay, and Vinita.</p>
                 &copy; 2026 Level & Anvil Solutions. Structured Residential Authority.
             </div>
         </div>
     </footer>
 
-    <script src="js/exit-intent.js"></script>`n</body>
+    <script src="js/exit-intent.js"></script>
+</body>
 
 </html>
-
-
-
-
-
-
-
