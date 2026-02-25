@@ -6,6 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Budget Estimator | Level & Anvil Solutions | Transparent Pricing</title>
     <link rel="stylesheet" href="styles.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Level & Anvil Solutions",
+      "image": "https://levelandanvil.com/images/logo.png",
+      "@id": "https://levelandanvil.com",
+      "url": "https://levelandanvil.com",
+      "telephone": "918-884-6615",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tulsa",
+        "addressRegion": "OK",
+        "postalCode": "74101",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.1539,
+        "longitude": -95.9928
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/LevelAndAnvil"
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -24,7 +63,7 @@
                 </div>
             </div>
             <div class="nav-group">
-                <a href="estimator.html" class="active">Estimator</a>
+                <a href="estimator.html" class="active">Free Estimate</a>
             </div>
             <div class="nav-group">
                 <a href="service-area.html">Service Area</a>
@@ -35,7 +74,7 @@
             <div class="nav-group">
                 <a href="reviews.html" class="top-level-style">Reviews</a>
             </div>
-            <a href="schedule.html" class="btn btn-primary" style="margin-top: 2rem;">Schedule a Time</a>
+            <a href="schedule.html" class="btn btn-primary" style="margin-top: 2rem;">Schedule an Evaluation</a>
         </nav>
     </div>
 
@@ -45,7 +84,7 @@
                 <img src="images/logo.png" alt="Level & Anvil Logo" class="logo-img">
                 <div class="logo-group-text">
                     <div class="logo-text">LEVEL <span>&</span> ANVIL</div>
-                    <a href="tel:9188846615" class="brand-phone">918-884-6615</a>
+                    <div class="brand-phone">Text a human now: <a href="tel:9188846615">918-884-6615</a></div>
                 </div>
             </a>
             <nav class="main-nav">
@@ -59,7 +98,7 @@
                             <a href="repairs.html">Skilled Repairs</a>
                         </div>
                     </li>
-                    <li><a href="estimator.html" class="active">Estimator</a></li>
+                    <li><a href="estimator.html" class="active">Free Estimate</a></li>
                     <li><a href="service-area.html">Service Area</a></li>
                     <li class="nav-item">
                         <a href="about.html">About</a>
@@ -68,7 +107,7 @@
                             <a href="reviews.html">Reviews</a>
                         </div>
                     </li>
-                    <li><a href="schedule.html" class="btn nav-btn">Schedule a Time</a></li>
+                    <li><a href="schedule.html" class="btn nav-btn">Schedule an Evaluation</a></li>
                 </ul>
             </nav>
             <div class="nav-toggle" id="navToggle">
@@ -147,12 +186,12 @@
                         <p id="v41RangeDesc"
                             style="color: var(--color-text-dim); margin-bottom: 3rem; font-size: 1rem;">Based on similar
                             projects, this type of work usually falls within the range shown above. If that range feels
-                            reasonable, the next step is to schedule a time to dial in your project.</p>
+                            reasonable, the next step is to Schedule an Evaluation to dial in your project.</p>
 
                         <div
                             style="background: var(--color-surface); padding: 2.5rem; border-radius: var(--radius-md);">
                             <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
-                                <a href="schedule.html" class="btn btn-primary" style="width: 100%;">Schedule a Time</a>
+                                <a href="schedule.html" class="btn btn-primary" style="width: 100%;">Schedule an Evaluation</a>
                                 <label class="btn btn-outline" style="width: 100%; cursor: pointer;">
                                     Upload Photos <input type="file" style="display:none;">
                                 </label>
@@ -236,11 +275,25 @@
 
     <!-- MOBILE STICKY CTA -->
     <div class="mobile-conversion-bar">
-        <a href="schedule.html" class="btn-sticky">Schedule a Time</a>
+        <a href="schedule.html" class="btn-sticky">Schedule an Evaluation</a>
     </div>
 
     <footer class="site-footer">
         <div class="container">
+                        <!-- GLOBAL FOOTER LEAD FORM -->
+            <div class="footer-cta-form">
+                <span class="eyebrow">Contact</span>
+                <h3>Request an Evaluation</h3>
+                <p>Tell us about your project and we will reach out to schedule a technical diagnosis.</p>
+                <form id="footerLeadForm">
+                    <div class="form-row">
+                        <input type="text" placeholder="Name" required>
+                        <input type="text" placeholder="Phone or Email" required>
+                    </div>
+                    <textarea placeholder="Briefly describe what you see (cracks, water, sagging, etc.)" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send to Level & Anvil</button>
+                </form>
+            </div>
             <div class="footer-map">
                 <div class="footer-col">
                     <img src="images/logo.png" alt="Level & Anvil Logo" class="logo-img-footer">
@@ -258,8 +311,8 @@
                 <div class="footer-col">
                     <h4>Tools</h4>
                     <ul class="footer-links">
-                        <li><a href="estimator.html" class="active">Budget Estimator</a></li>
-                        <li><a href="schedule.html">Schedule a Time</a></li>
+                        <li><a href="estimator.html" class="active">Budget Free Estimate</a></li>
+                        <li><a href="schedule.html">Schedule an Evaluation</a></li>
                         <li><a href="reviews.html">Reviews</a></li>
                     </ul>
                 </div>
@@ -280,8 +333,13 @@
         </div>
     </footer>
 
-</body>
+    <script src="js/exit-intent.js"></script>`n</body>
 
 </html>
+
+
+
+
+
 
 
