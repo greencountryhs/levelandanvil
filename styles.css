@@ -124,6 +124,11 @@ ul {
     display: flex;
     align-items: center;
     gap: 1rem;
+    cursor: pointer;
+}
+
+.logo-group:hover .logo-text {
+    color: var(--color-primary);
 }
 
 .logo-text {
@@ -132,6 +137,7 @@ ul {
     font-family: var(--font-heading);
     letter-spacing: -0.5px;
     line-height: 1;
+    transition: var(--transition);
 }
 
 .logo-text span {
@@ -230,9 +236,6 @@ ul {
     background: var(--color-bg);
     z-index: 1050;
     padding: 100px 5% 40px 5%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
     transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto;
 }
@@ -241,24 +244,42 @@ ul {
     right: 0;
 }
 
+.mobile-nav-drawer nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+    /* Generous gap between main groups */
+}
+
 .mobile-nav-drawer a {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 700;
     font-family: var(--font-heading);
+    display: block;
 }
 
 .mobile-nav-drawer .sub-items {
     padding-left: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-top: -1rem;
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+    /* Space between main link and its sub-items */
 }
 
 .mobile-nav-drawer .sub-items a {
     font-size: 1.1rem;
     font-weight: 400;
     color: var(--color-text-dim);
+}
+
+.mobile-nav-drawer .sub-items a.top-level-style {
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: var(--color-text);
+    margin-top: 1.5rem;
+    /* Additional space for 'Reviews' or similar */
 }
 
 /* Typography */
