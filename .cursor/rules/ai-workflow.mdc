@@ -1,0 +1,67 @@
+---
+description: AI workflow and change logging guardrails for Level & Anvil website
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# AI workflow rules for this repository
+
+## Project purpose
+This repository powers the public-facing Level & Anvil website.
+Its purpose is to clearly explain services, build trust, and help homeowners take the next step to contact the business.
+
+## Required context review
+Before making assumptions or edits, review:
+- relevant project files for the requested task
+- existing files in `.cursor/rules/`
+- `AI_CONTEXT.md` if present
+
+## Scope and session rules
+- Keep one clearly scoped task per AI session unless the user explicitly requests broader scope.
+- If uncertainty exists, flag it instead of guessing.
+- Prefer the smallest safe implementation that satisfies the request.
+
+## Required pre-edit workflow
+Before editing:
+1. Inspect relevant files and nearby dependencies.
+2. Confirm the smallest set of files needed.
+3. List the files you plan to change before making edits.
+4. Briefly explain the intended change.
+
+## Editing constraints
+- Preserve the existing design system and visual language unless the user asks for design changes.
+- Avoid broad refactors unless required for the requested fix.
+- Make focused, minimal, reversible edits.
+- Preserve existing working functionality.
+- Do not change unrelated files.
+
+## Content and copy guidance
+- Prefer clear homeowner-friendly language over abstract, corporate, or overly technical wording.
+- Keep copy concrete, useful, and plainspoken.
+- Preserve trust signals, local relevance, and conversion clarity.
+
+## Quality and protection requirements
+Preserve or improve:
+- SEO-critical content and structure
+- accessibility
+- responsiveness and mobile behavior
+- current working user flows
+
+Do not remove or degrade metadata, semantic structure, internal linking, or working CTAs without explicit approval.
+
+## Post-edit requirements
+After editing:
+1. Summarize:
+   - files changed
+   - what changed
+   - anything needing manual review
+2. Append an entry to `AI_CHANGELOG.md`
+
+## Change logging requirement
+For every meaningful AI-assisted change, append an entry to `AI_CHANGELOG.md` that includes:
+- date
+- task name
+- files changed
+- summary of changes
+- risks or follow-up items

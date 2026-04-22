@@ -1,1 +1,183 @@
-﻿<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Project Estimator | Realistic Planning Ranges | Level & Anvil Tulsa</title>    <meta name="description"        content="Use our Project Estimator to see typical investment ranges for repairs and renovations in Tulsa. Realistic planning for labor and materials.">    <link rel="stylesheet" href="styles.css"></head><body>    <div class="mobile-nav-drawer" id="mobileDrawer">        <nav>            <div class="nav-group">                <a href="index.html">Home</a>            </div>            <div class="nav-group">                <a href="services.html">Services</a>                <div class="sub-items">                    <a href="remodels.html">Remodels & Additions</a>                    <a href="structural.html">Structural & Water</a>                    <a href="repairs.html">Skilled Repairs</a>                    <a href="renovation-consultation.html">Renovation Consultation</a>                </div>            </div>            <div class="nav-group">                <a href="process.html">Our Process</a>            </div>            <div class="nav-group">                <a href="estimator.html" class="active">Project Estimator</a>            </div>            <div class="nav-group">                <a href="service-area.html">Service Area</a>            </div>            <div class="nav-group">                <a href="about.html">About</a>            </div>            <div class="nav-group">                <a href="reviews.html" class="top-level-style">Reviews</a>            </div>            <a href="schedule.html" class="btn btn-primary" style="margin-top: 2rem;">Schedule an Evaluation</a>        </nav>    </div>    <header class="site-header">        <div class="container header-inner">            <a href="index.html" class="logo-group">                <img src="images/logo.png" alt="Level & Anvil Logo" class="logo-img">                <div class="logo-group-text">                    <div class="logo-text">LEVEL <span>&</span> ANVIL</div>                    <div class="brand-phone">Text a human now: <a href="tel:9188846615">918-884-6615</a></div>                </div>            </a>            <nav class="main-nav">                <ul>                    <li><a href="index.html">Home</a></li>                    <li class="nav-item">                        <a href="services.html">Services</a>                        <div class="dropdown-menu">                            <a href="remodels.html">Remodels & Additions</a>                            <a href="structural.html">Structural & Water Management</a>                            <a href="repairs.html">Skilled Repairs</a>                            <a href="renovation-consultation.html">Renovation Consultation</a>                        </div>                    </li>                    <li><a href="process.html">Process</a></li>                    <li><a href="estimator.html" class="btn btn-brand" style="padding: 0.6rem 1.2rem !important; margin-left: 0.5rem;">Project Estimator</a></li>                    <li class="nav-item">                        <a href="about.html">About</a>                        <div class="dropdown-menu">                            <a href="about.html">Common Philosophy</a>                            <a href="reviews.html">Reviews</a>                        </div>                    </li>                    <li><a href="schedule.html" class="btn btn-primary" style="padding: 0.6rem 1.2rem !important;">Schedule an Evaluation</a></li>                </ul>            </nav>            <div class="nav-toggle" id="navToggle">                <span></span>                <span></span>                <span></span>            </div>        </div>    </header>    <main>        <section class="section section-dark" style="padding-bottom: 2rem;">            <div class="container" style="text-align: center;">                <span class="eyebrow">Project Planning</span>                <h1>Project Estimator</h1>                <p class="lead" style="margin-left: auto; margin-right: auto; max-width: 700px;">Get a realistic investment range for your project. Our estimates include labor + typical materials based on current Tulsa market rates.</p>            </div>        </section>        <section class="section">            <div class="container">                <!-- STEP 1: PATH SELECTION -->                <div id="pathSelection">                    <div style="text-align: center; margin-bottom: 3rem;">                        <span class="eyebrow">Step 1</span>                        <h3>What best describes your project?</h3>                    </div>                    <div class="estimator-paths">                        <div class="path-card" onclick="selectPath('repair')">                            <span class="path-icon">🛠️</span>                            <h3>Focused Repairs & Improvements</h3>                            <p>Defined repairs and upgrades, from small smart fixes to multi-day improvements.</p>                        </div>                        <div class="path-card" onclick="selectPath('renovation')">                            <span class="path-icon">🏗️</span>                            <h3>Renovation & Structural Projects</h3>                            <p>Layout changes, structural work, or multi-system updates requiring trade coordination and permitting.</p>                        </div>                    </div>                </div>                <!-- STEP 2: FORM SECTION -->                <div id="estimatorFormSection">                    <div style="text-align: center; margin-bottom: 3rem;">                        <span class="eyebrow">Step 2</span>                        <h3 id="formTitle">Project Details</h3>                        <p id="formIntro" style="max-width: 600px; margin: 1rem auto; opacity: 0.8;"></p>                    </div>                    <form id="dualEstimatorForm" onsubmit="calculateRange(event)" class="card" style="max-width: 800px; margin: 0 auto;">                        <div class="form-group" id="repairOptions" style="display:none;">                            <label>What best describes your need?</label>                            <select id="repairType" class="form-control">                                <option value="targeted">Targeted repair</option>                                <option value="door-window">Door/window installation</option>                                <option value="drainage">Drainage correction</option>                                <option value="structural">Structural stabilization (localized)</option>                                <option value="carpentry">Finish carpentry</option>                                <option value="exterior">Exterior repair</option>                                <option value="other">Other defined-scope work</option>                            </select>                        </div>                        <div class="form-group" id="renovationOptions" style="display:none;">                            <label>Project Type</label>                            <select id="renovationType" class="form-control">                                <option value="kitchen">Kitchen modernizations</option>                                <option value="structural-mod">Load-bearing modifications</option>                                <option value="multi-room">Multi-room reconfiguration</option>                                <option value="historic">Historic restoration</option>                                <option value="whole-home">Whole-home updates</option>                                <option value="drain-struct">Drainage + structural correction</option>                            </select>                        </div>                        <div class="form-group">                            <label id="levelLabel">Current Stage</label>                            <select id="projectStage" class="form-control">                                <!-- Options dynamically injected -->                            </select>                        </div>                        <div class="form-group">                            <label>Expected Investment Tier</label>                            <select id="budgetTier" class="form-control">                                <!-- Options dynamically injected -->                            </select>                        </div>                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Calculate Planning Range</button>                    </form>                    <!-- RESULTS -->                    <div id="estimatorResult" style="display: none; margin-top: 4rem; border-top: 2px solid var(--color-primary); padding-top: 3rem; text-align: center; animation: fadeIn 0.6s ease-out;">                        <span class="eyebrow">Analysis Complete</span>                        <h3>Estimated Planning Range</h3>                        <h2 id="rangeVal" style="color: var(--color-primary); margin-bottom: 1rem; font-size: 3.5rem;">$0 - $0</h2>                        <p id="rangeOutputLabel" style="font-weight: 700; color: #FFF; margin-bottom: 1rem;"></p>                        <p id="rangeDisclaimer" style="color: var(--color-text-dim); margin-bottom: 3rem; font-size: 1rem; max-width: 600px; margin-left: auto; margin-right: auto;"></p>`n                        <p style="font-size: 0.9rem; opacity: 0.7; margin-top: -2rem; margin-bottom: 2rem;">Planning ranges include labor and typical materials. Final pricing is confirmed after scope review.</p>                        <div style="background: var(--color-surface); padding: 3rem; border-radius: var(--radius-md); max-width: 600px; margin: 0 auto;">                            <h4>Next: Technical Diagnosis</h4>                            <p style="margin-bottom: 2rem; opacity: 0.8;">If this range aligns with your expectations, the next step is a professional evaluation to define exact scope.</p>                            <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">                                <a href="schedule.html" class="btn btn-primary" style="width: 100%;">Schedule an Evaluation</a>                                <label class="btn btn-outline" style="width: 100%; cursor: pointer;">                                    Upload Photos <input type="file" style="display:none;">                                </label>                            </div>                        </div>                    </div>                </div>            </div>        </section>    </main>    <script>        let currentPath = '';        const stages = {            repair: [                { val: 'known', label: 'Known scope' },                { val: 'diagnose', label: 'Problem diagnosis needed' },                { val: 'partial', label: 'Partial scope, refine' }            ],            renovation: [                { val: 'concept', label: 'Concept stage' },                { val: 'planning', label: 'Budget planning' },                { val: 'scope', label: 'Ready for scope definition' },                { val: 'const', label: 'Ready for construction' }            ]        };        const tiers = {            repair: [                { val: 't1', label: 'Under $2,500', min: 900, max: 2800 },                { val: 't2', label: '$2,500 – $7,500', min: 3000, max: 8900 },                { val: 't3', label: '$7,500 – $15,000', min: 8000, max: 16500 },                { val: 't4', label: '$15,000+', min: 15000, max: 25000 }            ],            renovation: [                { val: 'r1', label: '$10,000 – $25,000', min: 12500, max: 30000 },                { val: 'r2', label: '$25,000 – $50,000', min: 30000, max: 60000 },                { val: 'r3', label: '$50,000 – $75,000', min: 60000, max: 90000 },                { val: 'r4', label: '$75,000 – $125,000', min: 90000, max: 150000 },                { val: 'r5', label: '$125,000+', min: 150000, max: 0 }            ]        };        function selectPath(path) {            currentPath = path;            document.querySelectorAll('.path-card').forEach(c => c.classList.remove('active'));            event.currentTarget.classList.add('active');            const section = document.getElementById('estimatorFormSection');            const intro = document.getElementById('formIntro');            const repairOps = document.getElementById('repairOptions');            const renovOps = document.getElementById('renovationOptions');                        section.style.display = 'block';                        if (path === 'repair') {                intro.innerText = "This estimator is for defined repairs and upgrades, from small smart fixes to multi-day improvements.";                repairOps.style.display = 'block';                renovOps.style.display = 'none';            } else {                intro.innerText = "For projects involving layout changes, structural work, or multi-zone renovation that require trade coordination, permitting, and sequencing.";                repairOps.style.display = 'none';                renovOps.style.display = 'block';            }            // Populate Stage            const stageSelect = document.getElementById('projectStage');            stageSelect.innerHTML = stages[path].map(s => `<option value="${s.val}">${s.label}</option>`).join('');            // Populate Tiers            const tierSelect = document.getElementById('budgetTier');            tierSelect.innerHTML = tiers[path].map(t => `<option value="${t.val}">${t.label}</option>`).join('');            document.getElementById('estimatorResult').style.display = 'none';            window.scrollTo({ top: section.offsetTop - 50, behavior: 'smooth' });        }        function calculateRange(e) {            e.preventDefault();            const tierVal = document.getElementById('budgetTier').value;            const pathTiers = tiers[currentPath];            const selectedTier = pathTiers.find(t => t.val === tierVal);                        const displayRange = document.getElementById('rangeVal');            const outputLabel = document.getElementById('rangeOutputLabel');            const disclaimer = document.getElementById('rangeDisclaimer');            if (selectedTier.max === 0) {                displayRange.innerText = "$" + selectedTier.min.toLocaleString() + "+";            } else {                displayRange.innerText = "$" + selectedTier.min.toLocaleString() + " - $" + selectedTier.max.toLocaleString();            }            if (currentPath === 'repair') {                outputLabel.innerText = "Ranges include labor + typical materials.";                disclaimer.innerText = "Final pricing determined after scope evaluation. Complex or historic conditions may affect these ranges.";            } else {                outputLabel.innerText = "Ranges include materials + labor and typical trade coordination.";                disclaimer.innerText = "Final pricing requires defined scope, technical planning, and material selection. These ranges represent typical Tulsa investments for this project type.";            }            document.getElementById('estimatorResult').style.display = 'block';            window.scrollTo({ top: document.getElementById('estimatorResult').offsetTop - 100, behavior: 'smooth' });        }        // Mobile Nav        const navToggle = document.getElementById('navToggle');        const mobileDrawer = document.getElementById('mobileDrawer');        navToggle.addEventListener('click', () => {            mobileDrawer.classList.toggle('active');            navToggle.classList.toggle('active');        });    </script>    <!-- MOBILE STICKY CTA -->    <div class="mobile-conversion-bar">        <a href="schedule.html" class="btn-sticky">Schedule an Evaluation</a>    </div>    <footer class="site-footer">        <div class="container">            <!-- GLOBAL FOOTER LEAD FORM -->            <div class="footer-cta-form" id="leadForm">                <span class="eyebrow">Contact</span>                <h3>Request an Evaluation</h3>                <p>Tell us about your project and we will reach out to schedule a technical diagnosis.</p>                <form id="footerLeadForm">                    <div class="form-row">                        <input type="text" placeholder="Name" required>                        <input type="text" placeholder="Phone or Email" required>                    </div>                    <textarea placeholder="Briefly describe what you see (cracks, water, sagging, etc.)" required></textarea>                    <button type="submit" class="btn btn-primary">Send to Level & Anvil</button>                </form>            </div>            <div class="footer-map">                <div class="footer-col">                    <img src="images/logo.png" alt="Level & Anvil Logo" class="logo-img-footer">                    <p style="font-size: 0.95rem;">Level & Anvil provides practical residential solutions across Tulsa and Green Country.</p>                </div>                <div class="footer-col">                    <h4>Services</h4>                    <ul class="footer-links">                        <li><a href="remodels.html">Remodels & Additions</a></li>                        <li><a href="structural.html">Structural & Water</a></li>                        <li><a href="repairs.html">Skilled Repairs</a></li>                        <li><a href="renovation-consultation.html">Renovation Consultation</a></li>                    </ul>                </div>                <div class="footer-col">                    <h4>Internal</h4>                    <ul class="footer-links">                        <li><a href="process.html">Our Process</a></li>                        <li><a href="estimator.html" class="active">Project Estimator</a></li>                        <li><a href="reviews.html">Reviews</a></li>                        <li><a href="service-area.html">Service Area</a></li>                    </ul>                </div>                <div class="footer-col">                    <h4>Company</h4>                    <ul class="footer-links">                        <li><a href="about.html">About</a></li>                        <li><a href="https://tulsaareaforestschool.org" target="_blank">Forest School</a></li>                        <li>Call or Text: 918-884-6615</li>                    </ul>                </div>            </div>            <div class="footer-bottom">                <p style="margin-bottom: 1.5rem; color: var(--color-primary); font-weight: 600;">Serving Tulsa and Green Country including Broken Arrow, Jenks, Bixby, Owasso, Grove, Afton, Jay, and Vinita.</p>                &copy; 2026 Level & Anvil Solutions. Structured Residential Authority.            </div>        </div>    </footer>    <script src="js/exit-intent.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Level & Anvil Solutions | Tulsa</title>
+    <meta name="description" content="The estimator tool has been retired. Contact Level & Anvil to get a quote for repairs and small residential projects in Tulsa.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <nav>
+            <div class="nav-group">
+                <a href="index.html">Home</a>
+            </div>
+            <div class="nav-group">
+                <a href="services.html">Services</a>
+                <div class="sub-items">
+                    <a href="remodels.html">Remodels & Additions</a>
+                    <a href="structural.html">Structural & Water</a>
+                    <a href="repairs.html">Skilled Repairs</a>
+                    <a href="renovation-consultation.html">Renovation Consultation</a>
+                </div>
+            </div>
+            <div class="nav-group">
+                <a href="process.html">Our Process</a>
+            </div>
+            <div class="nav-group">
+                <a href="service-area.html">Service Area</a>
+            </div>
+            <div class="nav-group">
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-group">
+                <a href="reviews.html" class="top-level-style">Reviews</a>
+            </div>
+            <div class="nav-group">
+                <a href="schedule.html">Contact</a>
+            </div>
+            <a href="tel:9188846615" class="btn btn-primary" style="margin-top: 2rem;">Call or Text for a Quote</a>
+        </nav>
+    </div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-group">
+                <img src="images/logo.png" alt="Level & Anvil Logo" class="logo-img">
+                <div class="logo-group-text">
+                    <div class="logo-text">LEVEL <span>&</span> ANVIL</div>
+                    <div class="brand-phone">Text a human now: <a href="tel:9188846615">918-884-6615</a></div>
+                </div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="nav-item">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-menu">
+                            <a href="remodels.html">Remodels & Additions</a>
+                            <a href="structural.html">Structural & Water Management</a>
+                            <a href="repairs.html">Skilled Repairs</a>
+                            <a href="renovation-consultation.html">Renovation Consultation</a>
+                        </div>
+                    </li>
+                    <li><a href="process.html">Process</a></li>
+                    <li class="nav-item">
+                        <a href="about.html">About</a>
+                        <div class="dropdown-menu">
+                            <a href="about.html">Common Philosophy</a>
+                            <a href="reviews.html">Reviews</a>
+                        </div>
+                    </li>
+                    <li><a href="schedule.html">Contact</a></li>
+                    <li><a href="tel:9188846615" class="btn btn-primary" style="padding: 0.6rem 1.2rem !important;">Call or Text for a Quote</a></li>
+                </ul>
+            </nav>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section section-dark">
+            <div class="container" style="text-align: center;">
+                <span class="eyebrow">Update</span>
+                <h1>The estimator tool is no longer available</h1>
+                <p class="lead" style="max-width: 760px; margin-left: auto; margin-right: auto;">
+                    For pricing and project fit, contact us directly. We can review your project details and provide a quote.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+                    <a href="tel:9188846615" class="btn btn-primary">Call or Text for a Quote</a>
+                    <a href="schedule.html" class="btn btn-outline">Contact Us</a>
+                    <a href="services.html" class="btn btn-brand" style="padding: 1rem 2rem;">View Services</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="mobile-conversion-bar">
+        <a href="schedule.html" class="btn-sticky">Contact Us</a>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-cta-form" id="leadForm">
+                <span class="eyebrow">Contact</span>
+                <h3>Need Help With a Repair or Project?</h3>
+                <p>Call or text for a quote, or use our contact page to share project details.</p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+                    <a href="tel:9188846615" class="btn btn-primary">Call or Text for a Quote</a>
+                    <a href="schedule.html" class="btn btn-outline">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-map">
+                <div class="footer-col">
+                    <img src="images/logo.png" alt="Level & Anvil Logo" class="logo-img-footer">
+                    <p style="font-size: 0.95rem;">Level & Anvil provides practical residential solutions across Tulsa and Green Country.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="remodels.html">Remodels & Additions</a></li>
+                        <li><a href="structural.html">Structural & Water</a></li>
+                        <li><a href="repairs.html">Skilled Repairs</a></li>
+                        <li><a href="renovation-consultation.html">Renovation Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Internal</h4>
+                    <ul class="footer-links">
+                        <li><a href="process.html">Our Process</a></li>
+                        <li><a href="schedule.html">Contact Us</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="service-area.html">Service Area</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="https://tulsaareaforestschool.org" target="_blank">Forest School</a></li>
+                        <li>Licensed and Insured</li>
+                        <li>Call or Text: 918-884-6615</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="margin-bottom: 1.5rem; color: var(--color-primary); font-weight: 600;">Residential repair, drywall, restoration, and small-project help across Tulsa and Green Country.</p>
+                &copy; 2026 Level & Anvil Solutions. Structured Residential Authority.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+
+        navToggle.addEventListener('click', () => {
+            mobileDrawer.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.mobile-nav-drawer a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileDrawer.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+    </script>
+
+    
+</body>
+
+</html>
+
+
+

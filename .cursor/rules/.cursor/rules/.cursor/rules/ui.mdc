@@ -1,0 +1,59 @@
+---
+alwaysApply: true
+---
+---
+description: UI and component rules for the Level & Anvil website
+globs:
+  - "components/**/*.tsx"
+  - "components/**/*.ts"
+  - "src/components/**/*.tsx"
+  - "src/components/**/*.ts"
+alwaysApply: false
+---
+
+# UI component rules
+
+## Design priorities
+- clean
+- readable
+- trustworthy
+- simple
+- responsive
+
+## Component philosophy
+- Prefer reusable components when there is an actual repeat pattern
+- Do not abstract too early
+- Keep component APIs simple
+- Prefer readability over cleverness
+
+## Styling rules
+- Preserve the current visual system unless explicitly asked to redesign it
+- Make changes that improve polish without creating a new design language
+- Avoid inconsistent spacing, button treatments, and typography
+- Keep forms simple and easy to complete
+- Ensure hover, focus, and disabled states are clear
+
+## Responsive behavior
+Every UI change should consider:
+- small phones
+- tablets
+- desktop
+
+Avoid:
+- clipped text
+- overflowing cards
+- horizontal scroll
+- tiny tap targets
+- unreadable stacked layouts
+
+## Accessibility
+- Use semantic HTML where possible
+- Preserve or improve keyboard accessibility
+- Ensure labels exist for form controls
+- Do not rely on color alone to communicate meaning
+- Keep contrast strong enough for readability
+
+## Performance
+- Avoid unnecessarily large client-side components
+- Prefer server-friendly patterns where appropriate
+- Do not add animation or interactivity unless it improves the user experience

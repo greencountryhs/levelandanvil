@@ -396,10 +396,10 @@ h3 {
 
 .credibility-strip .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 0.9rem 2rem;
 }
 
 .cred-item {
@@ -408,6 +408,7 @@ h3 {
     gap: 0.8rem;
     font-size: 0.9rem;
     font-weight: 600;
+    text-align: center;
 }
 
 .cred-icon {
@@ -533,6 +534,7 @@ h3 {
     width: 100%;
     background: var(--color-primary);
     padding: 0.8rem;
+    padding-bottom: calc(0.8rem + env(safe-area-inset-bottom));
     z-index: 1001;
     text-align: center;
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
@@ -568,6 +570,44 @@ h3 {
     border-radius: var(--radius-md);
     border: 1px solid var(--color-border);
     height: 100%;
+}
+
+.homepage-final-cta-panel {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    padding: 2.5rem;
+}
+
+.project-fit-links a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.project-fit-links a:hover,
+.project-fit-links a:focus-visible {
+    color: #ffd37a;
+}
+
+/* Clickable review cards (homepage pattern) */
+a[style*="text-decoration: none"][style*="color: inherit"] > .card:has(.testimonial-meta) {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a[style*="text-decoration: none"][style*="color: inherit"] > .card:has(.testimonial-meta):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+a[style*="text-decoration: none"][style*="color: inherit"] > .card:has(.testimonial-meta) .testimonial-meta {
+    transition: color 0.2s ease;
+}
+
+a[style*="text-decoration: none"][style*="color: inherit"] > .card:has(.testimonial-meta):hover .testimonial-meta {
+    color: #ffd37a !important;
 }
 
 /* Footer v4.1 */
@@ -674,8 +714,16 @@ h3 {
         display: none;
     }
 
+    .credibility-strip .container {
+        justify-content: center;
+    }
+
     .mobile-conversion-bar {
         display: block;
+    }
+
+    body {
+        padding-bottom: 5.5rem;
     }
 
     .hero-buttons {
@@ -691,6 +739,10 @@ h3 {
         margin-bottom: 2rem;
     }
 
+    .homepage-final-cta-panel {
+        padding: 2rem 1.2rem;
+    }
+
     .section {
         padding: var(--spacing-md) 0;
     }
@@ -700,48 +752,14 @@ h3 {
     }
 }
 
-/* Exit Intent Pop-up */
-.exit-popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-    backdrop-filter: blur(5px);
-}
+@media (hover: none) and (pointer: coarse) {
+    .mobile-conversion-bar {
+        display: block;
+    }
 
-.exit-popup {
-    background: var(--color-surface);
-    padding: 3.5rem;
-    border-radius: var(--radius-md);
-    max-width: 500px;
-    width: 90%;
-    position: relative;
-    border: 2px solid var(--color-primary);
-    text-align: center;
-}
-
-.exit-popup-close {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    font-size: 2rem;
-    cursor: pointer;
-    color: var(--color-text-dim);
-}
-
-.exit-popup-close:hover {
-    color: #FFF;
-}
-
-.exit-popup h2 {
-    color: var(--color-primary);
-    margin-bottom: 1rem;
+    body {
+        padding-bottom: 5.5rem;
+    }
 }
 
 /* Local SEO Optimization Helper */

@@ -1,0 +1,54 @@
+---
+alwaysApply: true
+---
+---
+description: SEO and discoverability rules for the Level & Anvil website
+globs:
+  - "app/**/*.tsx"
+  - "app/**/*.ts"
+  - "pages/**/*.tsx"
+  - "pages/**/*.ts"
+  - "components/**/*.tsx"
+  - "src/**/*.tsx"
+alwaysApply: false
+---
+
+# SEO rules
+
+## SEO priorities
+- clear page titles
+- useful meta descriptions
+- strong headings
+- crawlable content
+- internal linking where natural
+- performant pages
+
+## Page content rules
+- Use one clear H1 per page
+- Make headings descriptive
+- Write for humans first, then search engines
+- Include relevant service/location wording naturally when appropriate
+- Avoid keyword stuffing
+
+## Technical rules
+- Preserve existing metadata patterns unless improving them
+- Do not create duplicate or conflicting metadata systems
+- Do not hide important content inside inaccessible UI patterns
+- Prefer plain, crawlable text for important service information
+
+## Local/service relevance
+When appropriate, help pages answer:
+- what service is offered
+- where it is offered
+- who it is for
+- how to get started
+
+## Schema and metadata
+Only add structured data when it is accurate and appropriate.
+Do not invent business data.
+Do not add fake FAQs.
+Do not generate synthetic review schema.
+
+## Performance awareness
+SEO changes must not significantly harm performance.
+Avoid heavy libraries or oversized media for minor SEO gains.

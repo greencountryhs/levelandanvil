@@ -1,0 +1,61 @@
+---
+alwaysApply: true
+---
+---
+description: Global rules for the Level & Anvil customer-facing website
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# Level & Anvil website rules
+
+## Project context
+This repository is for the public-facing Level & Anvil website.
+It is not the internal operations web app.
+Do not treat this project like a large SaaS dashboard unless explicitly requested.
+
+## Primary goals
+- Make small, safe, high-value improvements
+- Preserve production stability
+- Improve clarity, trust, conversion, and polish
+- Favor fast load times and simple maintainable code
+- Keep the codebase understandable for a small business owner
+
+## Change philosophy
+- Prefer minimal, surgical edits over broad rewrites
+- Do not redesign architecture unless explicitly asked
+- Do not replace working code just because a different pattern is possible
+- Avoid unrelated refactors
+- Preserve existing routes, page intent, and live business messaging unless asked to change them
+
+## Before making changes
+Always:
+1. inspect the relevant files first
+2. identify the smallest set of files needed
+3. explain what will change
+4. avoid touching unrelated files
+
+## When proposing work
+Prioritize:
+1. bug fixes
+2. broken UX or layout issues
+3. mobile responsiveness
+4. conversion improvements
+5. SEO improvements
+6. code cleanup only when it directly supports the requested task
+
+## Guardrails
+- Do not invent backend systems that do not already exist
+- Do not add heavy dependencies unless clearly justified
+- Do not add authentication, dashboards, admin tools, or database features unless explicitly requested
+- Do not create fake integrations or placeholder logic presented as production-ready
+- Do not silently change brand voice, service positioning, or business claims
+- Do not remove existing content unless it is clearly obsolete or the task requires it
+
+## Output expectations
+When completing a task:
+- summarize what changed
+- list files changed
+- note anything that still needs manual review
+- mention any assumptions made
