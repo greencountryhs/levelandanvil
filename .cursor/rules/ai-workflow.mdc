@@ -17,6 +17,38 @@ Before making assumptions or edits, review:
 - existing files in `.cursor/rules/`
 - `AI_CONTEXT.md` if present
 
+
+## Project architecture (critical)
+
+This is a static HTML/CSS/JS website.
+
+- Homepage: `index.html`
+- Global stylesheet: `styles.css`
+- Additional pages: individual `.html` files
+- No framework (NOT React, NOT Next.js, NOT any build system)
+- No `package.json` in use
+
+## Required verification before any structural changes
+
+Before making assumptions about architecture or implementing changes:
+
+1. Inspect actual files in the repo
+2. Confirm:
+   - `index.html` exists as homepage
+   - `styles.css` is used globally
+   - no framework-specific structure exists (no `/app`, no React components)
+3. If anything conflicts with this, STOP and ask for clarification
+
+## Forbidden assumptions
+
+- Do NOT assume this is a Next.js app
+- Do NOT reference:
+  - `app/(public)/page.js`
+  - `app/globals.css`
+  - `npm run dev`
+- Do NOT introduce frameworks, build tools, or dependencies unless explicitly requested
+
+
 ## Scope and session rules
 - Keep one clearly scoped task per AI session unless the user explicitly requests broader scope.
 - If uncertainty exists, flag it instead of guessing.

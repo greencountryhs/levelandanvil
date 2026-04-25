@@ -30,6 +30,388 @@ Short task name
 <!-- Add newest entries at the top under this line -->
 
 ### Date
+2026-04-25
+
+### Task
+Refine drywall repair page for high-intent conversion
+
+### Files Changed
+- drywall-repair.html
+
+### Summary of Changes
+- Tightened hero headline/lead to emphasize Tulsa drywall repair and clean blend-focused finish outcomes.
+- Strengthened `Good Fit For` and repair-scope sections with problem-focused homeowner intent language (holes, water damage, ceilings, bad prior patches, texture mismatch, movement cracks).
+- Updated 3-step approach wording to reinforce assess/cause -> proper repair prep -> texture/finish blending.
+- Added requested image-support line, stronger trust framing with realistic texture-expectation language, and friction-reducing CTA helper lines about texting photos.
+
+### Risks / Follow-up
+- None.
+
+### Date
+2026-04-25
+
+### Task
+Refine repairs page for stronger repair-service positioning
+
+### Files Changed
+- repairs.html
+
+### Summary of Changes
+- Tightened hero headline and lead copy to emphasize Tulsa-focused residential repair scope (doors, drywall, trim, exterior repairs, punch-list work, and troubleshooting).
+- Updated section headings and bullets to feel more repair-specific and less generic, including stronger older-home and exterior repair fit language.
+- Refined punch-list/exterior support copy and trust section language, including a more natural maintenance-plan fit mention.
+- Kept existing repair, carpentry, and fence images in place with minimal structure changes.
+
+### Risks / Follow-up
+- None.
+
+### Date
+2026-04-25
+
+### Task
+Restructure core service pages for conversion flow
+
+### Files Changed
+- services.html
+- repairs.html
+- remodels.html
+- drywall-repair.html
+- maintenance.html
+- structural.html
+
+### Summary of Changes
+- Reworked content flow on six service pages to follow a clearer conversion sequence: service-specific intro, good-fit guidance, project/examples, three-step approach, trust block, and direct CTA.
+- Added practical 3-step approach sections across pages (`Look at the issue`, `Explain the repair/project path`, `Complete the work cleanly and correctly`) with page-specific wording.
+- Added or improved trust sections to reinforce experience, licensed/insured status, and practical problem-solving; included maintenance-plan references on repairs, drywall, and maintenance-related contexts.
+- Standardized final CTA messaging to: `Tell us what needs fixed or improved, and we&rsquo;ll help you figure out the right next step.`
+- Removed repetitive wording and replaced broad repeated phrasing with more page-specific copy, including eliminating all `small remodel` language on the targeted service pages.
+
+### Risks / Follow-up
+- No structural/layout overhaul was performed; follow-up copy tuning can be done later based on conversion analytics or lead-quality feedback.
+
+### Date
+2026-04-25
+
+### Task
+Audit and trim non-critical image priority loading
+
+### Files Changed
+- remodels.html
+
+### Summary of Changes
+- Audited all `loading=\"eager\"` and `fetchpriority=\"high\"` image usages.
+- Kept intentional high-priority behavior for homepage hero preload and header logo images.
+- Downgraded non-hero content image `kitchen-remodel-white-cabinets-island-tulsa.webp` on `remodels.html` from eager/high to lazy/async.
+
+### Risks / Follow-up
+- None.
+
+### Date
+2026-04-25
+
+### Task
+Improve content image layout stability
+
+### Files Changed
+- styles.css
+- index.html
+- about.html
+- services.html
+- repairs.html
+- remodels.html
+
+### Summary of Changes
+- Added `height: auto;` to `.rhythm-img` in global stylesheet to preserve intrinsic proportions while images scale responsively.
+- Kept global `aspect-ratio` unset to avoid distortion across mixed portrait/landscape project photos.
+- Added intrinsic `width` and `height` attributes to all in-content `.rhythm-img` elements on key pages to reduce cumulative layout shift without altering layout structure.
+
+### Risks / Follow-up
+- None; sizing behavior remains responsive via existing `.rhythm-img { width: 100%; }`.
+
+### Date
+2026-04-25
+
+### Task
+Add natural internal links across key pages
+
+### Files Changed
+- services.html
+- about.html
+- index.html
+
+### Summary of Changes
+- Added contextual internal links from `services.html` to `repairs.html` and `remodels.html` near relevant project sections.
+- Added a natural About-page sentence linking to `services.html` and `remodels.html`.
+- Added homepage contextual links to `remodels.html` (project examples) and `services.html` (service categories) in existing content blocks.
+
+### Risks / Follow-up
+- None.
+
+### Date
+2026-04-25
+
+### Task
+Footer cleanup and repetitive copy reduction pass
+
+### Files Changed
+- index.html
+- about.html
+- services.html
+- repairs.html
+- structural.html
+- remodels.html
+- schedule.html
+- estimator.html
+- service-area.html
+- reviews.html
+- maintenance.html
+- drywall-repair.html
+
+### Summary of Changes
+- Removed footer `Call or Text for a Quote` link from the bottom nav/footer tools list across primary pages.
+- Replaced footer heading `Company` with `Credentials` and moved licensing detail into that footer column.
+- Added placeholder license-number row (`OK License #: [Add Number]`) next to existing `Licensed and Insured` in footer to support final compliance once exact number is provided.
+- Reduced repeated service-page helper copy by removing duplicate `Text Jon about your project` lines on service pages where it repeated.
+
+### Risks / Follow-up
+- Exact license number was not present in repository content; placeholder was used and should be replaced with the actual number.
+
+### Date
+2026-04-25
+
+### Task
+Add lightweight custom projects section
+
+### Files Changed
+- services.html
+
+### Summary of Changes
+- Added a new lightweight `Custom Projects` section to `services.html` using existing section/grid/card patterns.
+- Inserted requested images: fireplace feature wall, TV feature wall, and yurt custom wood floor project.
+- Added the exact requested intro line and concise 1–2 sentence descriptions for each project item.
+
+### Risks / Follow-up
+- None.
+
+### Date
+2026-04-25
+
+### Task
+Update About page bio imagery to project-based visuals
+
+### Files Changed
+- about.html
+
+### Summary of Changes
+- Removed the existing single bio image from the About page and replaced it with three requested project images.
+- Added alt text focused on family-owned business context, custom woodworking, and precision craftsmanship.
+- Added the requested supporting line below the image group while keeping layout simple and consistent with existing section styling.
+
+### Risks / Follow-up
+- None.
+
+### Date
+2026-04-25
+
+### Task
+Add fence project images to services and repairs pages
+
+### Files Changed
+- repairs.html
+- services.html
+
+### Summary of Changes
+- Added cedar fence close-up image to `repairs.html` with grouped caption in the small-project/handyman context.
+- Added wide backyard fence project image to `services.html` in a dedicated outdoor projects block with grouped caption.
+- Used each fence image once in a distinct logical placement to avoid duplicate identical placement.
+
+### Risks / Follow-up
+- None.
+
+### Date
+2026-04-25
+
+### Task
+Add custom shower image section to bathroom remodeling content
+
+### Files Changed
+- remodels.html
+
+### Summary of Changes
+- Added a new bathroom remodeling section on `remodels.html` with consistent existing `section` and `grid-2` layout styles.
+- Inserted `images/custom-tile-shower-installation-tulsa-ok.webp` with the exact requested alt text.
+- Added the requested supporting line adjacent to the image content block.
+- No homepage changes made.
+
+### Risks / Follow-up
+- None.
+
+### Date
+2026-04-25
+
+### Task
+Add open-concept remodel images to remodeling page
+
+### Files Changed
+- remodels.html
+
+### Summary of Changes
+- Extended the kitchen remodeling media block on `remodels.html` with requested open-concept supporting text.
+- Added `images/open-concept-home-remodel-tulsa-ok.webp` using the requested alt text (using existing optimized WebP asset with same slug; no `.jpg` file exists in repo).
+- Added optional secondary image `images/open-dining-living-area-remodel-flooring-tulsa.webp` with distinct alt text and clean two-column spacing.
+
+### Risks / Follow-up
+- If a `.jpg` is later added and specifically required, source path can be swapped directly.
+
+### Date
+2026-04-25
+
+### Task
+Add optimized kitchen remodel images on remodels page
+
+### Files Changed
+- remodels.html
+
+### Summary of Changes
+- Added a new kitchen remodeling image section near the top of `remodels.html`.
+- Inserted primary image `images/kitchen-remodel-white-cabinets-island-tulsa.webp` with the exact requested alt text and high-priority loading attributes.
+- Inserted secondary image `images/kitchen-remodel-gray-cabinets-wood-beam-tulsa.webp` with lazy loading.
+- Added the requested supporting paragraph adjacent to the image block.
+
+### Risks / Follow-up
+- None.
+
+### Date
+2026-04-25
+
+### Task
+Add homepage before and after section
+
+### Files Changed
+- index.html
+
+### Summary of Changes
+- Inserted a new `Before & After` section directly below the homepage hero.
+- Added two before images using the requested naming pattern (`kitchen-remodel-before-tulsa-1.webp`, `kitchen-remodel-before-tulsa-2.webp`) and one strong after image (`home-renovation-open-living-area-tulsa-ok.webp`).
+- Added the exact provided shared caption and project summary paragraph while keeping layout simple with existing grid/image classes.
+
+### Risks / Follow-up
+- None.
+
+### Date
+2026-04-25
+
+### Task
+Set hero accessibility text for background image
+
+### Files Changed
+- index.html
+
+### Summary of Changes
+- Kept homepage hero image source as `/images/home-renovation-open-living-area-tulsa-ok.webp` and retained existing high-priority preload behavior.
+- Added hero section accessibility label using `role="img"` and requested descriptive text via `aria-label`.
+- No hero text, layout, or styling changes.
+
+### Risks / Follow-up
+- None.
+
+### Date
+2026-04-25
+
+### Task
+Standardize image loading behavior and formats
+
+### Files Changed
+- index.html
+- about.html
+- services.html
+- repairs.html
+- structural.html
+- remodels.html
+- schedule.html
+- estimator.html
+- service-area.html
+- reviews.html
+- maintenance.html
+- drywall-repair.html
+
+### Summary of Changes
+- Added explicit image loading attributes across site image tags: header logos set to eager/high priority; footer and content images set to lazy loading.
+- Added intrinsic dimensions on shared logo images to reduce layout shift risk while preserving existing CSS-driven sizing.
+- Added hero image preload + high fetch priority in `index.html` for the homepage CSS background hero image.
+- Updated `repairs.html` in-content image source from `images/carpentry.png` to available WebP asset `images/carpentry-work-miter-saw-cutting-wood.webp`.
+
+### Risks / Follow-up
+- `about.html` still references `images/HeadshotPiper.jpg`; no matching WebP asset with the same subject/name exists in the current `images` directory.
+
+### Date
+2026-04-25
+
+### Task
+Switch homepage hero image to SEO-optimized filename
+
+### Files Changed
+- styles.css
+
+### Summary of Changes
+- Updated `.homepage-hero` background image URL to `/images/home-renovation-open-living-area-tulsa-ok.webp`.
+- Left hero layout, overlay, typography, and CTA structure unchanged.
+- Verified old hero filename reference was removed from code.
+
+### Risks / Follow-up
+- Confirm final visual crop in production cache after deploy.
+
+### Date
+2026-04-23
+
+### Task
+Update homepage hero background image to 20220319_111846.webp
+
+### Files Changed
+- styles.css
+
+### Summary of Changes
+- Swapped `.homepage-hero` background image URL from `images/LAHeroV1.jpg` to `images/20220319_111846.webp` (no other CSS or copy changes).
+
+### Risks / Follow-up
+- None; confirm asset `images/20220319_111846.webp` deploys with the site.
+
+### Date
+2026-04-21
+
+### Task
+Improve homepage hero subtext readability on image background
+
+### Files Changed
+- styles.css
+
+### Summary of Changes
+- Increased homepage hero image overlay opacity slightly to improve text contrast over bright image areas.
+- Added hero-specific subtext readability styling (`.homepage-hero .lead`) with lighter text color and subtle text shadow.
+- Kept hero layout, copy, CTA structure, and section order unchanged.
+
+### Risks / Follow-up
+- If the image crop shifts across uncommon screen sizes, overlay strength can be fine-tuned slightly without structural changes.
+
+### Date
+2026-04-21
+
+### Task
+Add homepage hero background image with readable overlay
+
+### Files Changed
+- index.html
+- styles.css
+
+### Summary of Changes
+- Added a small hero-specific class hook (`homepage-hero`) to the existing homepage hero section without changing structure, copy, or CTA layout.
+- Applied `images/L&AHeroV1.JPG` as the hero background image using `background-size: cover`, centered positioning, and no-repeat.
+- Added a subtle dark linear-gradient overlay for text contrast and a mobile-specific background-position adjustment for better crop behavior.
+
+### Risks / Follow-up
+- Overlay strength and mobile crop may benefit from minor visual tuning after live review on target devices.
+
+### Date
 2026-04-21
 
 ### Task

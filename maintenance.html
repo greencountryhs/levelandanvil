@@ -85,7 +85,7 @@
     <header class="site-header">
         <div class="container header-inner">
             <a href="index.html" class="logo-group">
-                <img src="images/logo.png" alt="Level & Anvil Logo" class="logo-img">
+                <img src="/images/logo.png" alt="Level & Anvil Logo" class="logo-img" loading="eager" fetchpriority="high" decoding="async" width="1536" height="1024">
                 <div class="logo-group-text">
                     <div class="logo-text">LEVEL <span>&</span> ANVIL</div>
                     <div class="brand-phone">Text a human now: <a href="tel:9188846615">918-884-6615</a></div>
@@ -127,8 +127,8 @@
         <section class="section section-dark">
             <div class="container">
                 <span class="eyebrow">Ongoing Home Maintenance</span>
-                <h1>Keep Your Home Maintained Without the Hassle</h1>
-                <p class="lead">Regular upkeep, small repairs, and seasonal maintenance for your property.</p>
+                <h1>Home Maintenance Support for Tulsa Homeowners</h1>
+                <p class="lead">Regular upkeep, repair follow-through, and seasonal maintenance support to keep your home in good working order.</p>
                 <div style="display: flex; gap: 1rem;">
                     <a href="schedule.html" class="btn btn-primary">Contact Us</a>
                     <a href="tel:9188846615" class="btn btn-outline">Call or Text for a Quote</a>
@@ -140,23 +140,22 @@
             <div class="container">
                 <div class="grid-2">
                     <div>
-                        <h3>What&rsquo;s Included</h3>
+                        <h3>Good Fit For</h3>
                         <ul style="color: var(--color-text-dim); margin-top: 1.5rem;">
-                            <li>&bull; Air filter changes</li>
-                            <li>&bull; Smoke detector checks</li>
-                            <li>&bull; Minor repairs and fixes</li>
-                            <li>&bull; Seasonal inspections</li>
-                            <li>&bull; Priority scheduling</li>
-                            <li>&bull; Monthly labor included</li>
+                            <li>&bull; Homeowners who want recurring upkeep handled on a predictable schedule</li>
+                            <li>&bull; Properties with ongoing small repairs and seasonal maintenance needs</li>
+                            <li>&bull; Owners who want one trusted contact for practical maintenance tasks</li>
+                            <li>&bull; Households that want fewer deferred repairs turning into bigger issues</li>
+                            <li>&bull; Clients who value clear communication and straightforward scope decisions</li>
                         </ul>
                     </div>
                     <div class="card">
-                        <h3>Who It&rsquo;s For</h3>
+                        <h3>Maintenance Tasks We Commonly Handle</h3>
                         <ul style="color: var(--color-text-dim); margin-top: 1.5rem;">
-                            <li>&bull; Anyone who wants help staying on top of upkeep</li>
-                            <li>&bull; People who prefer ongoing support instead of one-off fixes</li>
-                            <li>&bull; Properties that need regular small repairs and seasonal attention</li>
-                            <li>&bull; Anyone who wants fewer maintenance tasks to manage personally</li>
+                            <li>&bull; Air filter replacements and smoke detector checks</li>
+                            <li>&bull; Minor repair follow-up between larger projects</li>
+                            <li>&bull; Seasonal walk-throughs and priority maintenance items</li>
+                            <li>&bull; Practical fix lists for interior and exterior upkeep</li>
                         </ul>
                     </div>
                 </div>
@@ -166,10 +165,20 @@
         <section class="section section-dark">
             <div class="container">
                 <div style="max-width: 800px; margin: 0 auto;">
-                    <h3>How It Works</h3>
-                    <p style="color: var(--color-text-dim); margin-top: 1.5rem;">We handle small maintenance items on a regular basis.</p>
-                    <p style="color: var(--color-text-dim);">You don&rsquo;t have to track everything yourself.</p>
-                    <p style="color: var(--color-text-dim); margin-bottom: 0;">We catch small problems before they turn into bigger ones.</p>
+                    <h3>How We Approach the Work</h3>
+                    <p style="color: var(--color-text-dim); margin-top: 1.5rem;">1) <strong>Look at the issue:</strong> We review what needs attention now and what can be scheduled next.</p>
+                    <p style="color: var(--color-text-dim);">2) <strong>Explain the maintenance path:</strong> We provide clear priorities and practical upkeep scope.</p>
+                    <p style="color: var(--color-text-dim); margin-bottom: 0;">3) <strong>Complete the work cleanly and correctly:</strong> We handle maintenance tasks with consistent quality and follow-through.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div style="max-width: 860px; margin: 0 auto;">
+                    <span class="eyebrow">Trust</span>
+                    <h2>Maintenance Backed by Real Trade Experience</h2>
+                    <p style="color: var(--color-text-dim);">With 20+ years in the trades, licensed and insured service, and practical problem-solving, we help Tulsa homeowners stay ahead of recurring repair issues before they become larger projects.</p>
                 </div>
             </div>
         </section>
@@ -177,7 +186,7 @@
         <section class="section" style="text-align: center; border: none;">
             <div class="container">
                 <h2>Ask About Maintenance Plans</h2>
-                <p class="lead" style="margin-left: auto; margin-right: auto;">We can talk through what makes sense for your home.</p>
+                <p class="lead" style="margin-left: auto; margin-right: auto;">Tell us what needs fixed or improved, and we&rsquo;ll help you figure out the right next step.</p>
                 <div style="display: flex; gap: 1.2rem; justify-content: center;">
                     <a href="schedule.html" class="btn btn-primary">Contact Us</a>
                     <a href="tel:9188846615" class="btn btn-outline">Call or Text for a Quote</a>
@@ -204,7 +213,7 @@
             </div>
             <div class="footer-map">
                 <div class="footer-col">
-                    <img src="images/logo.png" alt="Level & Anvil Logo" class="logo-img-footer">
+                    <img src="/images/logo.png" alt="Level & Anvil Logo" class="logo-img-footer" loading="lazy" decoding="async" width="1536" height="1024">
                     <p style="font-size: 0.95rem;">Level & Anvil provides practical residential solutions across Tulsa and Green Country.</p>
                 </div>
                 <div class="footer-col">
@@ -219,17 +228,18 @@
                     <h4>Tools</h4>
                     <ul class="footer-links">
                         <li><a href="schedule.html">Contact Us</a></li>
-                        <li><a href="tel:9188846615">Call or Text for a Quote</a></li>
+                        
                         <li><a href="reviews.html">Reviews</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4>Credentials</h4>
                     <ul class="footer-links">
                         <li><a href="about.html">About</a></li>
                         <li><a href="service-area.html">Service Area</a></li>
                         <li>Licensed and Insured</li>
-                        <li>Call or Text: 918-884-6615</li>
+                        <li>Tulsa General Contractor License #CON-013639-2026</li>
+                        
                     </ul>
                 </div>
             </div>

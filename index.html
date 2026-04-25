@@ -9,6 +9,7 @@
         content="Tulsa Licensed General Contractor with 20+ years of experience. We solve the hardest home structural issues with precision and discipline. Clear scope, professional execution.">
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="preload" as="image" href="/images/home-renovation-open-living-area-tulsa-ok.webp" fetchpriority="high">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -87,7 +88,7 @@
     <header class="site-header">
         <div class="container header-inner">
             <a href="index.html" class="logo-group">
-                <img src="images/logo.png" alt="Level & Anvil Logo" class="logo-img">
+                <img src="/images/logo.png" alt="Level & Anvil Logo" class="logo-img" loading="eager" fetchpriority="high" decoding="async" width="1536" height="1024">
                 <div class="logo-group-text">
                     <div class="logo-text">LEVEL <span>&</span> ANVIL</div>
                     <div class="brand-phone">Text a human now: <a href="tel:9188846615">918-884-6615</a></div>
@@ -127,7 +128,7 @@
 
     <main>
         <!-- HERO -->
-        <section class="section section-dark">
+        <section class="section section-dark homepage-hero" role="img" aria-label="Home renovation in Tulsa Oklahoma featuring open living area, modern kitchen, stone fireplace, and updated flooring">
             <div class="container">
                 <span class="eyebrow">Tulsa Residential Repair & Small Projects</span>
                 <h1 style="max-width: 850px;">Expert Home Repairs in Tulsa - Done Right the First Time</h1>
@@ -136,6 +137,33 @@
                     <a href="tel:9188846615" class="btn btn-primary">Call or Text for a Quote</a>
                     <a href="schedule.html" class="btn btn-brand" style="padding: 1rem 2rem;">Contact Us</a>
                 </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <span class="eyebrow">Project Feature</span>
+                    <h2>Before &amp; After</h2>
+                    <p style="margin-top: 0.75rem; font-weight: 700; color: var(--color-primary);">From closed-off layout to open-concept living.</p>
+                    <p style="max-width: 900px; margin: 1rem auto 0;">This project started with a closed-off layout, outdated finishes, and limited natural flow between spaces. By removing walls and updating the kitchen, flooring, and living area, we transformed it into an open-concept home.</p>
+                    <p style="margin-top: 0.75rem;"><a href="remodels.html" class="hub-link">See more remodeling project examples &rarr;</a></p>
+                </div>
+                <div class="grid-3">
+                    <figure style="margin: 0;">
+                        <figcaption style="display: inline-block; margin-bottom: 0.5rem; font-weight: 700; color: var(--color-primary);">After</figcaption>
+                        <img src="/images/home-renovation-open-living-area-tulsa-ok.webp" alt="After renovation open-concept kitchen and living room in Tulsa Oklahoma" width="4000" height="3000" class="rhythm-img" loading="lazy" decoding="async">
+                    </figure>
+                    <figure style="margin: 0;">
+                        <figcaption style="display: inline-block; margin-bottom: 0.5rem; font-weight: 700; color: var(--color-primary);">Before</figcaption>
+                        <img src="/images/kitchen-remodel-before-tulsa-1.webp" alt="Before renovation kitchen and living area layout in Tulsa Oklahoma" width="4000" height="3000" class="rhythm-img" loading="lazy" decoding="async">
+                    </figure>
+                    <figure style="margin: 0;">
+                        <figcaption style="display: inline-block; margin-bottom: 0.5rem; font-weight: 700; color: var(--color-primary);">Before</figcaption>
+                        <img src="/images/kitchen-remodel-before-tulsa-2.webp" alt="Before renovation closed kitchen layout in Tulsa Oklahoma" width="4000" height="3000" class="rhythm-img" loading="lazy" decoding="async">
+                    </figure>
+                </div>
+                <p style="margin-top: 1rem; color: var(--color-text-dim);">Before photos showing the original layout prior to full kitchen and living room renovation, including wall removal and layout changes.</p>
             </div>
         </section>
 
@@ -224,8 +252,9 @@
                         <li>&bull; Older home problems and historic houses</li>
                         <li>&bull; Modernization projects</li>
                         <li>&bull; Aging-in-place improvements</li>
-                        <li>&bull; Small remodels and focused renovation work</li>
+                        <li>&bull; Remodeling updates and focused renovation work</li>
                     </ul>
+                    <p style="margin-top: 1rem;"><a href="services.html" class="hub-link">Browse all service categories &rarr;</a></p>
                     <p class="project-fit-links" style="font-weight: 700; color: var(--color-primary); margin-top: 1.5rem; margin-bottom: 0;">Not sure if your project fits?<br><a href="tel:9188846615">Call, text</a>, or <a href="schedule.html">email us</a> and we&rsquo;ll point you in the right direction.</p>
                 </div>
             </div>
@@ -320,7 +349,7 @@
             </div>
             <div class="footer-map">
                 <div class="footer-col">
-                    <img src="images/logo.png" alt="Level & Anvil Logo" class="logo-img-footer">
+                    <img src="/images/logo.png" alt="Level & Anvil Logo" class="logo-img-footer" loading="lazy" decoding="async" width="1536" height="1024">
                     <p style="font-size: 0.95rem;">Level & Anvil provides practical residential solutions across Tulsa and Green Country.</p>
                 </div>
                 <div class="footer-col">
@@ -342,12 +371,13 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4>Credentials</h4>
                     <ul class="footer-links">
                         <li><a href="about.html">About</a></li>
                         <li><a href="https://tulsaareaforestschool.org" target="_blank">Forest School</a></li>
                         <li>Licensed and Insured</li>
-                        <li>Call or Text: 918-884-6615</li>
+                        <li>Tulsa General Contractor License #CON-013639-2026</li>
+                        
                     </ul>
                 </div>
             </div>
