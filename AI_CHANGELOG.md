@@ -33,6 +33,47 @@ Short task name
 2026-04-28
 
 ### Task
+Phase 2 case study page: Tulsa full-home remodel
+
+### Files Changed
+- projects/tulsa-full-home-remodel.html
+- remodels.html
+- services.html
+- sitemap.xml
+
+### Summary of Changes
+- Added new case-study page at `/projects/tulsa-full-home-remodel` using the existing site shell, canonical/`og:url`, and a focused image set from `images/projects/tulsa-full-home-remodel/`.
+- Structured the page into hero, project summary, scope of work, before, process, finished result, and final contact CTA to `/schedule`.
+- Added contextual internal links to the new case study from `remodels.html` and `services.html`.
+- Added the new extensionless URL to `sitemap.xml`.
+
+### Risks / Follow-up
+- Several source image filenames include spaces; verify hosted path handling on production and confirm all images render after deploy.
+
+---
+
+### Date
+2026-04-28
+
+### Task
+Phase 2 case-study production hardening review
+
+### Files Changed
+- projects/tulsa-full-home-remodel.html
+
+### Summary of Changes
+- Updated two image `src` paths on the new case-study page to URL-encode spaces (`%20`) for safer production URL handling under nested routes.
+- Revalidated canonical/`og:url`, internal links, CTA destinations, and clean URL usage on the new page and linked references.
+
+### Risks / Follow-up
+- Recommend one visual browser pass on `/projects/tulsa-full-home-remodel` after deploy to confirm all project images load and crop as expected.
+
+---
+
+### Date
+2026-04-28
+
+### Task
 Phase 1 core image placement upgrades (homepage + core pages)
 
 ### Files Changed
