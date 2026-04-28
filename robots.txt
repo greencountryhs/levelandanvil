@@ -1,0 +1,5 @@
+# Level & Anvil — allow crawlers; sitemap lists public extensionless routes (clean URLs on Vercel).
+User-agent: *
+Allow: /
+
+Sitemap: https://levelandanvil.com/sitemap.xml

@@ -239,6 +239,19 @@ Avoid:
 
 Only add structured data that is accurate and supported.
 
+### Crawling (`robots.txt` and `sitemap.xml`)
+
+- **Production base URL:** `https://levelandanvil.com`. This repo is static HTML with no build step, so canonical URLs are maintained in HTML (`<link rel="canonical">`, `og:url`), `sitemap.xml`, `robots.txt`, and JSON-LD—not via `SITE_URL` / `NEXT_PUBLIC_*` env vars (those apply when a framework or CI substitutes values at build time).
+- **Deploy layout:** `robots.txt` and `sitemap.xml` live at the **repository root** next to `index.html`, so they are served at `/robots.txt` and `/sitemap.xml` on typical static hosts (including Vercel).
+- **Canonical URL shape (required):** `vercel.json` sets **`cleanUrls: true`** and **`trailingSlash: false`**. Treat **extensionless paths** as canonical:
+  - Homepage: `https://levelandanvil.com/` (trailing slash only on the root).
+  - Other pages: `https://levelandanvil.com/services`, `/about`, `/schedule`, etc.—**no** `.html` in links, sitemap, canonical tags, or Open Graph `og:url`.
+  - Source files remain `*.html` on disk; Vercel serves them at clean paths.
+- **Internal links:** Use **root-absolute paths** (for example `href="/services"`, `href="/"`), not `services.html`.
+- **JSON-LD:** `LocalBusiness` **`@id`** and **`url`** use the organization homepage **`https://levelandanvil.com/`** (with trailing slash). **`image`** stays `https://levelandanvil.com/images/...`.
+- **Adding a page:** Add `your-page.html`, link it with `href="/your-page"`, add `<url><loc>https://levelandanvil.com/your-page</loc></url>` to `sitemap.xml`, and set canonical/`og:url` on that page to the same URL.
+- **Verification:** After deploy, open `https://levelandanvil.com/robots.txt` and `https://levelandanvil.com/sitemap.xml`. Optionally submit the sitemap URL in Google Search Console.
+
 ## Performance guidance
 
 Favor performance-conscious choices.

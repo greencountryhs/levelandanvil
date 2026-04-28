@@ -30,6 +30,79 @@ Short task name
 <!-- Add newest entries at the top under this line -->
 
 ### Date
+2026-04-27
+
+### Task
+robots.txt comment wording (extensionless routes)
+
+### Files Changed
+- robots.txt
+
+### Summary of Changes
+- Updated top comment only: “public HTML routes” → “public extensionless routes”; no crawler directives changed.
+
+### Risks / Follow-up
+- None.
+
+### Date
+2026-04-27
+
+### Task
+Canonical URL strategy — Vercel cleanUrls (extensionless URLs site-wide)
+
+### Files Changed
+- All `*.html` pages (14 files)
+- sitemap.xml
+- AI_CONTEXT.md
+
+### Summary of Changes
+- Updated internal navigation and page links from `*.html` relative hrefs to root-absolute clean paths (`href="/services"`, `href="/"`, etc.).
+- Added per-page `<link rel="canonical">` and `<meta property="og:url">` matching extensionless production URLs; homepage uses `https://levelandanvil.com/`.
+- Set `sitemap.xml` `<loc>` entries to the same clean URLs (no `.html`).
+- Aligned `LocalBusiness` JSON-LD **`@id`** and **`url`** to **`https://levelandanvil.com/`** where present; left **`image`** as `https://levelandanvil.com/images/...`.
+- Documented canonical rules under AI_CONTEXT crawling notes (Vercel `cleanUrls` + `trailingSlash: false`). Left `robots.txt` unchanged.
+
+### Risks / Follow-up
+- None. Source files remain `*.html` on disk; confirm redirects from legacy `.html` URLs if old bookmarks exist.
+
+### Date
+2026-04-27
+
+### Task
+Review SEO crawler files — align sitemap URLs with production links
+
+### Files Changed
+- sitemap.xml
+- AI_CONTEXT.md
+
+### Summary of Changes
+- Updated all sitemap `<loc>` values to use **`https://levelandanvil.com/*.html`** (homepage `https://levelandanvil.com/`) so canonical URLs match internal links on the live site rather than clean-path aliases alone.
+- Revised AI_CONTEXT crawling notes for URL shape and new-page instructions.
+- *(Later superseded: extensionless clean URLs are now canonical site-wide; see “Canonical URL strategy — Vercel cleanUrls” entry above.)*
+
+### Risks / Follow-up
+- None. If Search Console shows duplicate URLs for clean vs `.html`, rely on one preferred pattern (this sitemap uses `.html` except root `/`).
+
+### Date
+2026-04-27
+
+### Task
+Add production SEO crawler files (`robots.txt`, `sitemap.xml`)
+
+### Files Changed
+- robots.txt
+- sitemap.xml
+- AI_CONTEXT.md
+
+### Summary of Changes
+- Added root-level `robots.txt` allowing all crawlers and pointing to the absolute sitemap URL.
+- Added root-level `sitemap.xml` listing all public pages with clean URLs aligned to `vercel.json` (`cleanUrls`, no trailing slash), `lastmod`, `changefreq`, and `priority`.
+- Documented base URL, Vercel URL shape, how to extend the sitemap, and verification steps under AI_CONTEXT crawling notes.
+
+### Risks / Follow-up
+- If the production domain ever differs from `https://levelandanvil.com`, update `robots.txt`, `sitemap.xml`, and JSON-LD URLs consistently. Bump `lastmod` in `sitemap.xml` when pages materially change.
+
+### Date
 2026-04-25
 
 ### Task
