@@ -33,6 +33,30 @@ Short task name
 2026-04-28
 
 ### Task
+Mobile header phone formatting and subpage duplicate-hero cleanup
+
+### Files Changed
+- styles.css
+- about.html
+- repairs.html
+- drywall-repair.html
+- remodels.html
+- index.html
+
+### Summary of Changes
+- Updated header contact markup to split “Text a human now:” and the phone number into dedicated spans while keeping one `tel:9188846615` clickable link and no nested anchors.
+- Added responsive header-phone styling so mobile displays two lines (`Text a human now:` then `918-884-6615`) with the phone/contact text in the brand gold accent.
+- Removed duplicate lower-page reuse of hero images on `about.html`, `repairs.html`, and `drywall-repair.html`.
+- Replaced duplicate lower-page reuse on `remodels.html` with an alternate existing remodel image to avoid repeating the hero image.
+- Updated homepage service-card imagery so the fan/ceiling image now sits under Water Damage & Ceiling Repair, while the Drywall/Doors card is intentionally left without an image.
+
+### Risks / Follow-up
+- Quick browser QA is recommended on mobile header wrapping and homepage card height balance when one service card has no image.
+
+### Date
+2026-04-28
+
+### Task
 Header phone-link fix, subpage hero images, nav discoverability, and homepage/about layout polish
 
 ### Files Changed
