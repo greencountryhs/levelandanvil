@@ -33,6 +33,27 @@ Short task name
 2026-04-28
 
 ### Task
+Phase 1 core image placement upgrades (homepage + core pages)
+
+### Files Changed
+- index.html
+- remodels.html
+- repairs.html
+- services.html
+
+### Summary of Changes
+- Kept homepage hero/trust-bar structure and before/after remodel section; preserved planned service-card image strategy (drywall card intentionally image-free, water/ceiling card uses `home-renovation-before-living-room-tulsa.webp`, general repairs card uses `carpentry-work-miter-saw-cutting-wood.webp`).
+- Corrected remodels secondary media block to use distinct supporting images (`kitchen-remodel-gray-cabinets-wood-beam-tulsa.webp` and `open-dining-living-area-remodel-flooring-tulsa.webp`) while keeping hero image unchanged and non-duplicated lower on page.
+- Added a practical repair example block on repairs page with before/after fireplace gas-valve + masonry images (`brick-fireplace-gas-valve-repair-before-tulsa.webp` and `brick-fireplace-repair-gas-valve-replaced-tulsa.webp`).
+- Added a concise visual “Browse Service Pages” section on services overview linking directly to `/remodels`, `/repairs`, `/drywall-repair`, `/maintenance`, `/structural`, and `/renovation-consultation` using existing root images.
+
+### Risks / Follow-up
+- Visual density on `services.html` increased intentionally with one additional section; recommended manual review on mobile scroll length and card rhythm.
+
+### Date
+2026-04-28
+
+### Task
 Mobile header phone formatting and subpage duplicate-hero cleanup
 
 ### Files Changed
