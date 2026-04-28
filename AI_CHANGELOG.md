@@ -30,6 +30,39 @@ Short task name
 <!-- Add newest entries at the top under this line -->
 
 ### Date
+2026-04-28
+
+### Task
+Header phone-link fix, subpage hero images, nav discoverability, and homepage/about layout polish
+
+### Files Changed
+- index.html
+- about.html
+- services.html
+- repairs.html
+- remodels.html
+- structural.html
+- drywall-repair.html
+- maintenance.html
+- service-area.html
+- process.html
+- renovation-consultation.html
+- reviews.html
+- schedule.html
+- estimator.html
+- styles.css
+
+### Summary of Changes
+- Fixed header branding/contact markup to avoid nested links while keeping both home-link branding and direct `tel:9188846615` action in the brand area.
+- Added above-the-fold hero images to all subpages using existing repository images with descriptive alt text and intrinsic dimensions.
+- Expanded service discoverability links in nav/footer patterns for `/repairs`, `/remodels`, `/drywall-repair`, `/maintenance`, `/structural`, and `/renovation-consultation` (clean URLs only).
+- Updated footer tagline wording from “small-project” to “project” wording across pages.
+- Moved homepage trust strip directly below the hero, added images to homepage service cards, and reduced About hero spacing so bio content appears sooner.
+
+### Risks / Follow-up
+- Hero images were selected from existing page-relevant assets; no new image files were added. Recommend a quick visual QA pass for crop/spacing on mobile and desktop.
+
+### Date
 2026-04-27
 
 ### Task
