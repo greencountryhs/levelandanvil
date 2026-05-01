@@ -261,6 +261,10 @@ ul {
     gap: 6px;
     cursor: pointer;
     z-index: 1100;
+    background: transparent;
+    border: 0;
+    padding: 0.25rem;
+    border-radius: var(--radius-sm);
 }
 
 .nav-toggle span {
@@ -269,6 +273,11 @@ ul {
     height: 3px;
     background-color: var(--color-text);
     transition: var(--transition);
+}
+
+.nav-toggle:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
 }
 
 /* Mobile Drawer */
@@ -316,6 +325,10 @@ ul {
     font-size: 1.1rem;
     font-weight: 400;
     color: var(--color-text-dim);
+}
+
+.mobile-nav-drawer a.active {
+    color: var(--color-primary);
 }
 
 .mobile-nav-drawer .sub-items a.top-level-style {
@@ -385,6 +398,15 @@ h3 {
     box-shadow: 0 8px 25px rgba(0, 102, 255, 0.3);
 }
 
+.btn:focus-visible,
+.main-nav a:focus-visible,
+.dropdown-menu a:focus-visible,
+.mobile-nav-drawer a:focus-visible,
+.footer-links a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
 .btn-brand {
     background-color: var(--color-primary);
     color: #000;
@@ -417,6 +439,10 @@ h3 {
 .nav-btn:hover {
     background: #FFF !important;
     transform: translateY(-1px);
+}
+
+.nav-cta-btn {
+    padding: 0.6rem 1.2rem !important;
 }
 
 /* Credibility Strip */
@@ -569,7 +595,10 @@ h3 {
     padding: 0.8rem;
     padding-bottom: calc(0.8rem + env(safe-area-inset-bottom));
     z-index: 1001;
-    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    pointer-events: none;
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -579,8 +608,12 @@ h3 {
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    display: block;
-    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-width: 190px;
+    pointer-events: auto;
 }
 
 /* Grid Systems */
@@ -622,6 +655,105 @@ h3 {
 .project-fit-links a:hover,
 .project-fit-links a:focus-visible {
     color: #ffd37a;
+}
+
+.before-after-mini {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.before-after-mini .rhythm-img {
+    margin-bottom: 0;
+}
+
+.featured-project-slider {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.featured-project-slides {
+    overflow: hidden;
+}
+
+.featured-project-slide {
+    display: none;
+    background: var(--color-surface-soft);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+}
+
+.featured-project-slide.active {
+    display: block;
+}
+
+.featured-project-slide h3 {
+    margin-bottom: 1rem;
+}
+
+.slide-image-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.slide-image-row figure {
+    margin: 0;
+}
+
+.slide-image-row figcaption {
+    margin-top: 0.65rem;
+    color: var(--color-text-dim);
+    font-size: 0.9rem;
+}
+
+.slider-control {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    z-index: 1002;
+}
+
+.slider-control:hover,
+.slider-control:focus-visible {
+    border-color: var(--color-primary);
+    background: rgba(var(--color-primary-rgb), 0.08);
+}
+
+.featured-project-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 1002;
+}
+
+.featured-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 999px;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 1002;
+}
+
+.featured-dot.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
 }
 
 /* Clickable review cards (homepage pattern) */
@@ -702,6 +834,50 @@ a[style*="text-decoration: none"][style*="color: inherit"] > .card:has(.testimon
     width: 100%;
 }
 
+.footer-cta-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.footer-cta-actions .btn {
+    margin-top: 0;
+}
+
+.footer-description {
+    font-size: 0.95rem;
+}
+
+.breadcrumbs {
+    margin-bottom: 1.25rem;
+}
+
+.breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumbs li {
+    color: var(--color-text-dim);
+    font-size: 0.9rem;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: "/";
+    margin-left: 0.5rem;
+    color: var(--color-border);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus-visible {
+    color: var(--color-primary);
+}
+
 .footer-col h4 {
     color: var(--color-primary);
     font-size: 0.85rem;
@@ -752,7 +928,7 @@ a[style*="text-decoration: none"][style*="color: inherit"] > .card:has(.testimon
     }
 
     .mobile-conversion-bar {
-        display: block;
+        display: flex;
     }
 
     body {
@@ -801,6 +977,44 @@ a[style*="text-decoration: none"][style*="color: inherit"] > .card:has(.testimon
         padding: 2rem 1.2rem;
     }
 
+    .featured-project-slider {
+        grid-template-columns: 1fr;
+    }
+
+    .slider-control {
+        justify-self: center;
+    }
+
+    .slider-control.prev {
+        order: 1;
+    }
+
+    .featured-project-slides {
+        order: 3;
+    }
+
+    .slider-control.next {
+        order: 2;
+    }
+
+    .slide-image-row {
+        grid-template-columns: 1fr;
+    }
+
+    .before-after-mini {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-project-section {
+        padding-bottom: calc(var(--spacing-md) + 5.5rem);
+    }
+
+    .featured-project-slider,
+    .featured-project-dots,
+    .featured-project-links {
+        margin-bottom: 1rem;
+    }
+
     .section {
         padding: var(--spacing-md) 0;
     }
@@ -812,7 +1026,7 @@ a[style*="text-decoration: none"][style*="color: inherit"] > .card:has(.testimon
 
 @media (hover: none) and (pointer: coarse) {
     .mobile-conversion-bar {
-        display: block;
+        display: flex;
     }
 
     body {

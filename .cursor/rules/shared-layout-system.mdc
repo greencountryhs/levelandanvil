@@ -1,0 +1,29 @@
+---
+description: Enforce shared header/footer/navigation layout system for all pages
+globs:
+  - "**/*.html"
+  - "js/layout.js"
+  - "styles.css"
+alwaysApply: true
+---
+
+# Shared layout system (required)
+
+## Required page shell for every HTML page
+- Include exactly one `#app-header` mount container.
+- Include exactly one `#app-footer` mount container.
+- Include `<script src="/js/layout.js"></script>` near the end of `body`.
+- Breadcrumbs are optional and must use a dedicated `[data-breadcrumbs]` mount (do not hardcode breadcrumb markup).
+
+## Do not reintroduce legacy duplicated layout markup
+- Do not add hardcoded `<header class="site-header">` in page files.
+- Do not add hardcoded `<footer class="site-footer">` in page files.
+- Do not add duplicated mobile drawer markup (`mobile-nav-drawer`) in page files.
+- Do not add inline nav toggle scripts (`navToggle`, `mobileDrawer`, click/Escape handlers) in page files.
+- Do not add page-specific sticky/mobile navigation behavior in page files.
+- Do not manually set nav active classes or page-level `aria-current` in page files.
+
+## Centralized change policy
+- Header/footer structure, sticky behavior, mobile drawer behavior, active-link logic, `aria-current`, and nav accessibility behavior must be changed centrally in `js/layout.js`.
+- Shared visual and state styling for global navigation/layout must be changed in `styles.css` (or other shared global styles), not duplicated per page.
+- If a page needs a unique local section nav, it must not duplicate the global site header/footer/navigation system.

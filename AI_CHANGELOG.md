@@ -30,6 +30,68 @@ Short task name
 <!-- Add newest entries at the top under this line -->
 
 ### Date
+2026-05-01
+
+### Task
+Investigate missing production portfolio page
+
+### Files Changed
+- sitemap.xml
+
+### Summary of Changes
+- Confirmed `portfolio.html` exists locally but is currently untracked in git, while `projects/tulsa-full-home-remodel.html` is tracked.
+- Verified production responses: featured project resolves, but `portfolio` and `portfolio.html` both return 404.
+- Added `/portfolio` to `sitemap.xml` so the page is included in crawl/discovery once deployed.
+
+### Risks / Follow-up
+- Root cause for missing production page is deployment state: `portfolio.html` is not yet tracked/committed/deployed from this repository state.
+- After commit/deploy, verify both `/portfolio` and `/portfolio.html` on production (with `cleanUrls: true`, both should resolve to the same page).
+
+---
+
+### Date
+2026-05-01
+
+### Task
+Production link-path hardening for portfolio and featured project links
+
+### Files Changed
+- index.html
+- services.html
+- remodels.html
+- portfolio.html
+
+### Summary of Changes
+- Verified production URL behavior for clean and `.html` forms of `portfolio` and `projects/tulsa-full-home-remodel`.
+- Updated internal page links that pointed to clean routes for these targets to explicit `.html` paths to reduce static-host 404 risk.
+- Kept canonical metadata and other routing behavior unchanged in this pass.
+
+### Risks / Follow-up
+- Production currently returns 404 for both `/portfolio` and `/portfolio.html`; deploy/publish verification for `portfolio.html` is still required.
+
+---
+
+### Date
+2026-05-01
+
+### Task
+Homepage mobile featured-project interaction hardening
+
+### Files Changed
+- index.html
+- styles.css
+
+### Summary of Changes
+- Fixed mobile tap interception between the fixed `mobile-conversion-bar` and homepage Featured Project controls/links.
+- Reordered featured-project link/dot/control blocks so key actions appear earlier in the section and stay clear of the sticky CTA overlap zone.
+- Updated sticky mobile CTA behavior to use `pointer-events` gating and a right-aligned, content-width button so non-CTA content beneath remains tappable while keeping the sticky CTA active.
+
+### Risks / Follow-up
+- Validate on production mobile devices that `/projects/...` and `/portfolio` clean URLs resolve as expected in the deployed environment (local static server returns 404 for extensionless paths).
+
+---
+
+### Date
 2026-04-28
 
 ### Task
@@ -1272,3 +1334,167 @@ De-link and retire estimator user path
 ### Risks / Follow-up
 - Some pages still use "Schedule an Evaluation" as primary CTA text; this remains functional but may need a separate sitewide wording standardization pass.
 - Manually click through all primary pages to confirm no estimator references remain in rendered UI after deployment.
+
+### Date
+2026-05-01
+
+### Task
+Standardize shared header, footer, and navigation shell
+
+### Files Changed
+- js/layout.js
+- styles.css
+- index.html
+- services.html
+- about.html
+- repairs.html
+- remodels.html
+- drywall-repair.html
+- maintenance.html
+- renovation-consultation.html
+- process.html
+- reviews.html
+- schedule.html
+- service-area.html
+- structural.html
+- estimator.html
+- projects/tulsa-full-home-remodel.html
+
+### Summary of Changes
+- Added shared layout renderer in `js/layout.js` with centralized `AppHeader`, `MainNavigation`, `MobileNavigation`, `Breadcrumbs`, `AppFooter`, and shell initialization logic.
+- Standardized active-link behavior by deriving current route from `window.location.pathname` and applying active/`aria-current` states across desktop and mobile navigation.
+- Improved shared navigation accessibility with semantic nav labels, toggle button `aria-expanded` handling, keyboard focus styles, and Escape-to-close behavior.
+- Updated all site pages to mount shared header/footer via `#app-header` and `#app-footer` plus a shared layout script include.
+- Updated `styles.css` with shared nav/footer utility classes and focus-visible states that now apply consistently across navigation and footer links.
+
+### Risks / Follow-up
+- Legacy page-level header/footer markup remains hidden on most pages after migration and should be fully removed in a follow-up cleanup pass to reduce HTML payload.
+- Run a manual browser pass on key routes (desktop + mobile) to validate dropdown behavior, mobile drawer interactions, and route-active highlighting.
+
+### Date
+2026-05-01
+
+### Task
+Remove legacy duplicated layout markup
+
+### Files Changed
+- index.html
+- services.html
+- about.html
+- repairs.html
+- remodels.html
+- drywall-repair.html
+- maintenance.html
+- renovation-consultation.html
+- process.html
+- reviews.html
+- schedule.html
+- service-area.html
+- structural.html
+- estimator.html
+- projects/tulsa-full-home-remodel.html
+
+### Summary of Changes
+- Removed hidden legacy mobile drawer markup, legacy header blocks, legacy footer blocks, and old inline nav toggle scripts from all pages using shared layout mounts.
+- Kept only shared layout mount points and shared script include (`#app-header`, `#app-footer`, and `/js/layout.js`) per page.
+- Verified no remaining static duplicated `site-header`, `site-footer`, mobile drawer markup, or legacy `navToggle` inline script blocks in HTML.
+
+### Risks / Follow-up
+- Manual browser click-through is still recommended to validate runtime interactions across key breakpoints after cleanup.
+
+### Date
+2026-05-01
+
+### Task
+Smoke-pass nav behavior validation and route normalization fix
+
+### Files Changed
+- js/layout.js
+
+### Summary of Changes
+- Ran browser smoke tests across `/`, `/services.html`, `/schedule.html`, and `/projects/tulsa-full-home-remodel.html` at desktop and mobile widths.
+- Fixed shared route normalization logic in `js/layout.js` so active-state matching reliably handles `.html` routes in local/static testing while preserving clean-path production behavior.
+- Re-validated mobile drawer interactions: toggle open/close, Escape-to-close, and `aria-expanded` state transitions.
+
+### Risks / Follow-up
+- Browser console shows only existing non-fatal third-party warnings (`tally.so` embed and Cursor dialog override notices); no runtime errors from `js/layout.js`.
+
+### Date
+2026-05-01
+
+### Task
+Add Cursor rule for shared layout enforcement
+
+### Files Changed
+- .cursor/rules/shared-layout-system.mdc
+
+### Summary of Changes
+- Added a new always-applied Cursor rule that enforces the shared page shell (`#app-header`, `#app-footer`, and `/js/layout.js`) for site pages.
+- Added explicit prohibitions against reintroducing hardcoded site header/footer, duplicated mobile drawer markup, and inline nav-toggle scripts in page files.
+- Added centralized-change guidance directing global nav/header/footer behavior and accessibility logic to `js/layout.js` and shared styling updates to `styles.css`.
+
+### Risks / Follow-up
+- Existing nested or duplicate rule files in `.cursor/rules` may still be candidates for cleanup, but no immediate conflict with this new rule was identified.
+
+### Date
+2026-05-01
+
+### Task
+Refine awkward copy and shared footer tagline
+
+### Files Changed
+- js/layout.js
+- index.html
+- services.html
+- repairs.html
+- remodels.html
+- structural.html
+- maintenance.html
+- drywall-repair.html
+
+### Summary of Changes
+- Replaced awkward “Tell us what needs fixed or improved…” CTA wording with: “Send a quick note about what is going on, and we’ll help you figure out the next step.”
+- Updated centralized shared footer copy in `js/layout.js` from “Structured Residential Authority” to “Practical repair, remodeling, and problem-solving help for Tulsa-area homeowners.”
+- Updated homepage credibility strip coverage line to include specific Tulsa-area communities and verified acceptable wrapping on desktop and mobile.
+
+### Risks / Follow-up
+- Historical wording in `AI_CHANGELOG.md` entries remains unchanged as part of revision history and is not user-facing site copy.
+
+### Date
+2026-05-01
+
+### Task
+Improve contact page crawlable info and form guidance
+
+### Files Changed
+- schedule.html
+
+### Summary of Changes
+- Added visible crawlable owner/contact details near the top of the page: Jon Poyner, Owner/Operator, phone number, and email with clickable `tel:` and `mailto:` links.
+- Added required explanatory copy directly above the Tally form: “Send the basics and a few photos.” plus guidance on what to submit.
+- Added focused CTA links near the owner block (call, email, send project details, services, and service area) and kept the Tally embed as the primary action.
+- Added an existing owner-appropriate image asset below the form section with descriptive alt text.
+- Removed page-level sticky conversion bar markup so contact page continues relying on the shared layout system for global sticky/footer behavior.
+
+### Risks / Follow-up
+- Footer CTA content remains globally shared in `js/layout.js`; changing footer-level repetition would affect all pages and was intentionally not modified in this contact-page-scoped update.
+
+### Date
+2026-05-01
+
+### Task
+Homepage messaging refresh plus featured-project flow and portfolio page
+
+### Files Changed
+- index.html
+- styles.css
+- portfolio.html
+
+### Summary of Changes
+- Reworked homepage hero copy, CTA language, trust line, and added an early positioning block to improve clarity, local relevance, and homeowner-facing tone.
+- Replaced old homepage before/after block with a new Featured Project slideshow (vanilla JS + lightweight CSS) linking to both the featured case study and new portfolio page.
+- Updated homepage services presentation with revised service cards (including Custom Builds) and swapped drywall/water-damage imagery to align with requested before/after context.
+- Created `portfolio.html` as a first-pass section-based portfolio hub with grouped examples for remodels, repairs, drywall/ceilings, doors/trim/interior, water/structural, and custom builds.
+
+### Risks / Follow-up
+- Slider controls are functional and responsive in smoke testing; if future content growth is expected, a dedicated reusable slider utility file may be worth extracting from inline script.
