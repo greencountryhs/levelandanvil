@@ -596,9 +596,8 @@ h3 {
     padding-bottom: calc(0.8rem + env(safe-area-inset-bottom));
     z-index: 1001;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    pointer-events: none;
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -608,12 +607,12 @@ h3 {
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: auto;
-    min-width: 190px;
-    pointer-events: auto;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
 }
 
 /* Grid Systems */
@@ -638,6 +637,56 @@ h3 {
     height: 100%;
 }
 
+.service-card-link {
+    display: block;
+    color: inherit;
+}
+
+.service-card-link .card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card-link:hover .card {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+    border-color: var(--color-primary);
+}
+
+.service-card-link:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+    border-radius: var(--radius-md);
+}
+
+.trust-reviews-band {
+    padding-top: var(--spacing-md);
+}
+
+.trust-reviews-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.trust-reviews-text {
+    max-width: 880px;
+}
+
+.trust-review-list {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.trust-review-list blockquote {
+    margin: 0;
+    padding: 1rem 1.1rem;
+    border-left: 3px solid var(--color-primary);
+    background: var(--color-surface-soft);
+    color: var(--color-text-dim);
+    border-radius: var(--radius-sm);
+}
+
 .homepage-final-cta-panel {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -650,6 +699,30 @@ h3 {
     color: var(--color-primary);
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+.inline-accent-link {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.inline-accent-link:hover,
+.inline-accent-link:focus-visible {
+    color: #ffd37a;
+}
+
+.subtle-cta-link {
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    letter-spacing: 0.2px;
+}
+
+.subtle-cta-link:hover,
+.subtle-cta-link:focus-visible {
+    color: #ffd37a;
 }
 
 .project-fit-links a:hover,
@@ -910,7 +983,8 @@ a[style*="text-decoration: none"][style*="color: inherit"] > .card:has(.testimon
     .grid-2,
     .grid-3,
     .footer-map,
-    .rhythm-row {
+    .rhythm-row,
+    .trust-reviews-layout {
         grid-template-columns: 1fr;
         gap: 3rem;
     }

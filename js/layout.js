@@ -204,7 +204,7 @@
           <div class="footer-map">
             <div class="footer-col">
               <img src="/images/logo.png" alt="Level & Anvil Logo" class="logo-img-footer" loading="lazy" decoding="async" width="1536" height="1024">
-              <p class="footer-description">Level & Anvil provides practical residential solutions across Tulsa and Green Country.</p>
+              <p class="footer-description">Level & Anvil provides expert solutions across Tulsa and Green Country.</p>
             </div>
             <div class="footer-col">
               <h4>Services</h4>

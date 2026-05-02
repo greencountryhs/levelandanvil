@@ -33,6 +33,175 @@ Short task name
 2026-05-01
 
 ### Task
+Service pages text-photo guidance, services hub positioning, premium fencing copy
+
+### Files Changed
+- repairs.html
+- drywall-repair.html
+- structural.html
+- schedule.html
+- services.html
+- AI_CHANGELOG.md
+
+### Summary of Changes
+- Added visible crawlable guidance on repairs, drywall, structural, and contact pages encouraging texting or sending photos plus a short description, with `tel:` and `/schedule.html#project-details-form` links where appropriate.
+- Refreshed `services.html` hero headline/supporting copy for broader homeowner/office/business positioning and replaced the hero image with an on-site Jon photo (closest available active-work asset).
+- Updated live fence/fencing wording on `services.html` and `repairs.html` toward premium design-forward outdoor fencing language.
+- Normalized several internal links touched in this pass to `.html` paths.
+
+### Risks / Follow-up
+- No dedicated standalone “Jon framing-only” image filename was present in the repo; hero uses `/images/Jon/Handyman-prepping-master-bedroom-addition.webp` as the clearest Jon actively-working asset.
+
+---
+
+### Date
+2026-05-01
+
+### Task
+Homepage services/trust updates plus custom builds and image-gallery expansion
+
+### Files Changed
+- index.html
+- custom-builds.html
+- services.html
+- projects/tulsa-full-home-remodel.html
+- portfolio.html
+- styles.css
+
+### Summary of Changes
+- Updated homepage services section label/headline, three requested service-card descriptions, trust-strip location text, and trust-strip service-rating line.
+- Updated homepage Featured Project heading/supporting text, removed the small eyebrow label above it, and applied the three requested slideshow-caption text changes.
+- Updated homepage repair-help paragraph to include linked `custom built maintenance plan` text to `/maintenance.html` and added a subtle CTA link above the Forest School section.
+- Created `custom-builds.html` with shared layout mounts and first-pass sections for yurt, ebony wall, teepee art installation support, geodome, and custom design work using existing image assets.
+- Expanded `projects/tulsa-full-home-remodel.html` and `portfolio.html` with additional existing images, descriptive captions, and preserved/added links to relevant `.html` pages.
+- Added an optional custom-builds link in `services.html` and minimal link styling helpers in `styles.css`.
+
+### Risks / Follow-up
+- No dedicated teepee art-installation or geodome photo filenames currently exist in the image set; related sections use the closest existing custom-build images until more specific photos are added.
+
+---
+
+### Date
+2026-05-01
+
+### Task
+Homepage section order cleanup and targeted caption wording refresh
+
+### Files Changed
+- index.html
+- portfolio.html
+- repairs.html
+- js/layout.js
+
+### Summary of Changes
+- Confirmed no live instance of `Structured Residential Authority.` remained.
+- Updated the requested repairs caption wording and refreshed select portfolio captions to sound less robotic while keeping intent and SEO context.
+- Reordered homepage sections so the primary text-only reviews section appears directly under the credibility bar, moved Featured Project directly below it, moved the unchanged approach-steps section to just above Forest School, and removed the duplicate lower reviews section.
+- Updated shared footer copy in `js/layout.js` to "expert solutions" language.
+
+### Risks / Follow-up
+- None.
+
+---
+
+### Date
+2026-05-01
+
+### Task
+Homepage trust/CTA copy cleanup and footer sentence update
+
+### Files Changed
+- index.html
+- repairs.html
+- js/layout.js
+
+### Summary of Changes
+- Updated the repairs page before/after caption to remove the redundant leading "Practical".
+- Reworked homepage approach content to the requested three-step Evaluate/Communicate/Deliver wording.
+- Updated homepage trust/CTA panel copy to the requested "Practical Repair Help You Can Count On" heading and added the requested next-step CTA language.
+- Removed the redundant lower homepage contact/CTA section by replacing it with the requested trust/repair-help panel content.
+- Updated shared footer sentence in `js/layout.js` from "practical residential solutions" to "expert solutions".
+
+### Risks / Follow-up
+- None.
+
+---
+
+### Date
+2026-05-01
+
+### Task
+Homepage and reviews testimonial corrections plus copy-control rule
+
+### Files Changed
+- index.html
+- reviews.html
+- .cursor/rules/copy-change-control.mdc
+
+### Summary of Changes
+- Restored visible 5-star indicators on each abbreviated homepage review while keeping the trust-adjacent review block text-only.
+- Updated requested testimonial excerpts and descriptor wording on homepage and `reviews.html` exactly as provided.
+- Added Lisa Forbes 5-star testimonial to `reviews.html` with matching reviewer name and descriptor.
+- Added a new always-applied Cursor rule to block unsolicited copy changes unless the user explicitly requests copy edits.
+
+### Risks / Follow-up
+- None.
+
+---
+
+### Date
+2026-05-01
+
+### Task
+Homepage reviews-band image removal and reviews hero image swap
+
+### Files Changed
+- index.html
+- reviews.html
+- styles.css
+
+### Summary of Changes
+- Removed the image from the homepage trust-adjacent reviews band, leaving a text-only review section directly below the trust bar.
+- Kept the campfire image only in the Forest School community block on the homepage.
+- Replaced the reviews page hero image with `/images/Jon/Handyman-prepping-master-bedroom-addition.webp` and updated alt text.
+- Retained sticky CTA full-width link behavior (`.mobile-conversion-bar .btn-sticky { width: 100%; }`) and centered alignment.
+
+### Risks / Follow-up
+- None.
+
+---
+
+### Date
+2026-05-01
+
+### Task
+Homepage CTA, service-card, sticky CTA, slideshow, and structural page refinements
+
+### Files Changed
+- index.html
+- structural.html
+- styles.css
+- about.html
+- service-area.html
+
+### Summary of Changes
+- Updated homepage hero/form CTAs so the second action now routes directly to the schedule form section and uses form-focused wording.
+- Reworked homepage service cards into fully clickable card links, added a sixth maintenance card, and completed requested image swaps for drywall and water-damage cards.
+- Added a concise review band directly under the first trust bar (with Jon image), updated the approach copy to diagnosis-first language, and added the requested Tulsa Forest School image block.
+- Swapped the slideshow master-bath "before" image to an in-progress shower action shot from existing assets.
+- Updated structural page hero and supporting imagery to the Visiting Angels French Drain set, aligned CTAs to schedule form targets, and removed page-level duplicate sticky CTA markup.
+- Updated sticky CTA CSS so text is centered and the bar is implemented as a full-width clickable action while preserving mobile slideshow tap access.
+- Replaced remaining live-site "repair-first" copy with diagnosis-first wording in `about.html` and `service-area.html`.
+
+### Risks / Follow-up
+- Browser automation confirmed slider/dot interactions remain tappable on mobile; perform one manual tap test on a physical device to confirm full-width sticky-bar tap behavior exactly matches expected finger targets.
+
+---
+
+### Date
+2026-05-01
+
+### Task
 Investigate missing production portfolio page
 
 ### Files Changed

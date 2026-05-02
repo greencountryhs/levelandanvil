@@ -1,0 +1,22 @@
+---
+description: Prevent unsolicited copy edits unless explicitly requested
+alwaysApply: true
+---
+
+# Copy Change Control
+
+## Default behavior
+- Do not change site copy unless the user explicitly requests copy changes.
+- Preserve existing wording for headings, body text, testimonials, CTAs, captions, alt text, service descriptions, meta descriptions, and review text during technical tasks.
+
+## For layout/style/technical tasks
+- Keep all user-facing copy exactly as-is.
+- If copy appears awkward, inconsistent, outdated, or SEO-improvable, report it as a recommendation only.
+
+## Testimonials and customer reviews
+- Treat testimonials/reviews as exact user-provided content.
+- Do not paraphrase, clean up, shorten, expand, grammar-correct, or normalize review text unless explicitly instructed.
+
+## If copy must change for technical reasons
+- Propose the minimum required copy adjustment and ask before applying it.
+- If user has already authorized copy edits, change only the specifically requested lines and leave unrelated copy untouched.
