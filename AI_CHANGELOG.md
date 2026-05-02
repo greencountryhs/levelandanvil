@@ -33,6 +33,33 @@ Short task name
 2026-05-01
 
 ### Task
+Sitewide copy (Northeast Oklahoma), footer, hero backgrounds, services hub + CTAs, outdoor/exterior pages, case study
+
+### Files Changed
+- index.html (verify prior session), services.html, repairs.html, drywall-repair.html, structural.html, schedule.html, reviews.html, about.html, remodels.html, maintenance.html, portfolio.html, custom-builds.html, process.html, renovation-consultation.html, service-area.html, estimator.html
+- projects/tulsa-full-home-remodel.html
+- outdoor-spaces.html (new), exterior-repairs.html (new)
+- styles.css (`.case-scope-card` transparent bg), sitemap.xml, AI_CHANGELOG.md
+
+### Summary of Changes
+- Verification pass (same date): **`services.html`** — moved the narrow “Text Jon / Send project details” band to sit **after** “Browse Service Pages” so that block follows **Projects We Handle Most Often** immediately; **`projects/tulsa-full-home-remodel.html`** — H1 and `<title>` punctuation aligned to **Full home remodel in Tulsa.**
+- Confirmed live HTML/JS copy uses **Northeast Oklahoma** (no user-facing **Green Country** in site sources).
+- Applied **`page-hero-bg`** background heroes sitewide on listed pages (plus process, renovation-consultation, service-area, estimator); schedule uses a dedicated hero band above contact/form content; **`tel:`** and **`/schedule.html#project-details-form`** where CTAs were touched.
+- **`services.html`**: “Browse Service Pages” under “Projects We Handle Most Often,” redundant pillar cards removed, standalone Custom Projects section removed, drywall bullet shortened, outdoor link → **`outdoor-spaces.html`**, Exterior Repairs card, subtle section CTAs.
+- **`projects/tulsa-full-home-remodel.html`**: Title **Full home remodel in Tulsa**, lead includes **more open**, hero uses bg treatment, scope cards use kitchen/bath after-photo backgrounds (`case-scope-card`), bedroom after image swapped from **`ABed20220319_111754_result.webp`** to **`AMastBed20220319_111737_result.webp`**.
+- Added **`outdoor-spaces.html`** and **`exterior-repairs.html`** (shared layout, existing images); sitemap entries for **`custom-builds`**, **`outdoor-spaces`**, **`exterior-repairs`**.
+- Natural mentions of leaks, faucets, fixtures, smart home, aging in place, emergency repairs, urgent service calls on services, repairs, maintenance, schedule, structural, drywall, remodels as requested.
+
+### Risks / Follow-up
+- Removed duplicate inline **`mobile-conversion-bar`** blocks from pages where **`js/layout.js`** already injects the sticky bar (**`repairs.html`**, **`drywall-repair.html`**, **`reviews.html`**, **`process.html`**, **`renovation-consultation.html`**, **`maintenance.html`**, **`service-area.html`**, **`projects/tulsa-full-home-remodel.html`**, plus **`estimator.html`** / **`remodels.html`** from earlier in this pass).
+- Custom builds first gallery image duplicates the hero asset path by design.
+
+---
+
+### Date
+2026-05-01
+
+### Task
 Service pages text-photo guidance, services hub positioning, premium fencing copy
 
 ### Files Changed

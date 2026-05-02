@@ -188,7 +188,7 @@
   function renderAppFooter() {
     return `
       <div class="mobile-conversion-bar" role="complementary" aria-label="Mobile contact shortcut">
-        <a href="/schedule" class="btn-sticky">Contact Us</a>
+        <a href="/schedule.html#project-details-form" class="btn-sticky">Contact Us</a>
       </div>
       <footer class="site-footer">
         <div class="container">
@@ -198,13 +198,13 @@
             <p>Call or text for a quote, or use our contact page to share project details.</p>
             <div class="footer-cta-actions">
               <a href="${phoneHref}" class="btn btn-primary">Call or Text for a Quote</a>
-              <a href="/schedule" class="btn btn-outline">Contact Us</a>
+              <a href="/schedule.html#project-details-form" class="btn btn-outline">Contact Us</a>
             </div>
           </div>
           <div class="footer-map">
             <div class="footer-col">
               <img src="/images/logo.png" alt="Level & Anvil Logo" class="logo-img-footer" loading="lazy" decoding="async" width="1536" height="1024">
-              <p class="footer-description">Level & Anvil provides expert solutions across Tulsa and Green Country.</p>
+              <p class="footer-description">Level & Anvil provides expert solutions across Tulsa and Northeast Oklahoma.</p>
             </div>
             <div class="footer-col">
               <h4>Services</h4>
@@ -236,7 +236,7 @@
             </div>
           </div>
           <div class="footer-bottom">
-            <p style="margin-bottom: 1.5rem; color: var(--color-primary); font-weight: 600;">Residential repair, drywall, restoration, and project help across Tulsa and Green Country.</p>
+            <p style="margin-bottom: 1.5rem; color: var(--color-primary); font-weight: 600;">Handyman services, full scale remodels, repair, drywall, historic restoration, and project help across Tulsa and Northeast Oklahoma</p>
             &copy; 2026 Level & Anvil Solutions. Practical repair, remodeling, and problem-solving help for Tulsa-area homeowners.
           </div>
         </div>

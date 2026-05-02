@@ -108,6 +108,72 @@ ul {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
 }
 
+/* Interior pages: hero image as background (matches homepage treatment; set --hero-bg-img per section) */
+.page-hero-bg {
+    --hero-bg-img: none;
+    background-image:
+        linear-gradient(rgba(10, 13, 18, 0.58), rgba(10, 13, 18, 0.64)),
+        var(--hero-bg-img);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page-hero-bg .lead {
+    color: #f1f5f9;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+}
+
+.page-hero-bg h1 {
+    color: #f1f5f9;
+}
+
+.page-hero-bg .hero-help-text {
+    color: rgba(241, 245, 249, 0.9);
+}
+
+.page-hero-bg .hero-help-text .hub-link {
+    color: var(--color-primary);
+}
+
+.page-hero-bg .hero-help-text .hub-link:hover,
+.page-hero-bg .hero-help-text .hub-link:focus-visible {
+    color: #ffd37a;
+}
+
+/* Case study scope cards with photographic backgrounds */
+.case-scope-card {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    isolation: isolate;
+}
+
+.case-scope-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(22, 27, 34, 0.88), rgba(22, 27, 34, 0.93));
+    z-index: 0;
+    border-radius: inherit;
+}
+
+.case-scope-card h3,
+.case-scope-card p {
+    position: relative;
+    z-index: 1;
+}
+
+.case-scope-card--kitchen {
+    background-image: url("/images/projects/tulsa-full-home-remodel/AKitchen20220316_202339_result.webp");
+}
+
+.case-scope-card--bath {
+    background-image: url("/images/projects/tulsa-full-home-remodel/ABath20220319_111822_result.webp");
+}
+
 /* Logo Styles */
 .logo-img {
     height: 45px;
