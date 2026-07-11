@@ -1,6 +1,6 @@
 (() => {
-  const phoneHref = "tel:9188846615";
-  const phoneDisplay = "918-884-6615";
+  const phoneHref = "tel:9188090930";
+  const phoneDisplay = "(918) 809-0930";
   function normalizePath(pathname) {
     let normalized = pathname || "/";
     if (normalized === "/index.html") return "/";

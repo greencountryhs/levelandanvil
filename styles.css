@@ -141,6 +141,17 @@ ul {
     color: #ffd37a;
 }
 
+/* Services hero: keep portrait subjects (e.g. Jon) fully in frame */
+.page-hero-bg.page-hero-bg--jon-photo {
+    background-position: center 22%;
+}
+
+@media (max-width: 900px) {
+    .page-hero-bg.page-hero-bg--jon-photo {
+        background-position: center 12%;
+    }
+}
+
 /* Case study scope cards with photographic backgrounds */
 .case-scope-card {
     position: relative;
@@ -704,12 +715,22 @@ h3 {
 }
 
 .service-card-link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     color: inherit;
 }
 
 .service-card-link .card {
+    flex: 1 1 auto;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card-link .service-card-faux-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--color-primary);
+    font-weight: 700;
 }
 
 .service-card-link:hover .card {

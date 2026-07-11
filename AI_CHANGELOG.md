@@ -30,6 +30,51 @@ Short task name
 <!-- Add newest entries at the top under this line -->
 
 ### Date
+2026-07-10
+
+### Task
+Update business phone number sitewide
+
+### Files Changed
+- js/layout.js
+- index.html, about.html, schedule.html, services.html, repairs.html, structural.html, drywall-repair.html, maintenance.html, remodels.html, reviews.html, service-area.html, exterior-repairs.html, outdoor-spaces.html, estimator.html
+- projects/tulsa-full-home-remodel.html
+- Image_Inventory.md
+- AI_CHANGELOG.md
+
+### Summary of Changes
+- Replaced all instances of the old number `918-884-6615` / `tel:9188846615` with `(918) 809-0930` / `tel:9188090930`.
+- Updated shared header/footer phone constants in `js/layout.js` plus visible display text, `tel:` links, and JSON-LD `telephone` fields on pages.
+- No layout, CTA wording, or functional changes beyond the phone number itself.
+
+### Risks / Follow-up
+- Confirm Google Business Profile, Tally form, and any off-site listings still show the new number if they are managed outside this repo.
+- None for on-site phone display/links after this update.
+
+---
+
+### Date
+2026-05-02
+
+### Task
+Trust/CTA copy, structural page title, services hero framing, clickable service cards, approach section alignment
+
+### Files Changed
+- index.html, services.html, structural.html, repairs.html, drywall-repair.html, maintenance.html, schedule.html, styles.css, AI_CHANGELOG.md
+
+### Summary of Changes
+- **Homepage hero:** Added **Locally owned, Tulsa-based, licensed and insured**, project-fit positioning line, **Text photos for a first look.**; later consolidated trust into one sentence (**Locally owned, Tulsa-based, licensed and insured. 20+ years in the trades.**) with project-fit + photo lines unchanged.
+- **Repair/service/contact pages:** Added exact **Text photos for a first look.** adjacent to primary repair/contact CTAs (including bottom sections where CTAs appear).
+- **`structural.html`:** Updated `<title>` to **Structural, Drainage & Water Damage Repair Help in Tulsa | Level & Anvil**; **H1** aligned to structural/drainage/water repair focus.
+- **`services.html`:** **`page-hero-bg--jon-photo`** for background-position; browse heading **See examples of projects we've done in Northeast Oklahoma recently**; service grid cards wrapped in **`service-card-link`** (full-card click, **`service-card-faux-link`** end text); CTA strips use **btn** styling; **How We Approach the Work** matches homepage **Evaluate / Communicate / Deliver** copy; approach CTAs and **Ready to Talk** button labels per spec; removed redundant duplicate mid-page Text Jon/Send details strip; verification pass increased compact CTA band padding (**2.75rem**) for clearer separation (no redundant footer-style **Need Help…** block present).
+- **`styles.css`:** `.page-hero-bg--jon-photo` positioning; **`.service-card-link`** flex layout + **`.service-card-faux-link`** styling.
+
+### Risks / Follow-up
+- **`service-card-link`** is now **flex** for equal-height cards; spot-check homepage service tiles if any layout regression.
+
+---
+
+### Date
 2026-05-01
 
 ### Task
@@ -364,8 +409,8 @@ Mobile header phone formatting and subpage duplicate-hero cleanup
 - index.html
 
 ### Summary of Changes
-- Updated header contact markup to split “Text a human now:” and the phone number into dedicated spans while keeping one `tel:9188846615` clickable link and no nested anchors.
-- Added responsive header-phone styling so mobile displays two lines (`Text a human now:` then `918-884-6615`) with the phone/contact text in the brand gold accent.
+- Updated header contact markup to split “Text a human now:” and the phone number into dedicated spans while keeping one `tel:9188090930` clickable link and no nested anchors.
+- Added responsive header-phone styling so mobile displays two lines (`Text a human now:` then `(918) 809-0930`) with the phone/contact text in the brand gold accent.
 - Removed duplicate lower-page reuse of hero images on `about.html`, `repairs.html`, and `drywall-repair.html`.
 - Replaced duplicate lower-page reuse on `remodels.html` with an alternate existing remodel image to avoid repeating the hero image.
 - Updated homepage service-card imagery so the fan/ceiling image now sits under Water Damage & Ceiling Repair, while the Drywall/Doors card is intentionally left without an image.
@@ -397,7 +442,7 @@ Header phone-link fix, subpage hero images, nav discoverability, and homepage/ab
 - styles.css
 
 ### Summary of Changes
-- Fixed header branding/contact markup to avoid nested links while keeping both home-link branding and direct `tel:9188846615` action in the brand area.
+- Fixed header branding/contact markup to avoid nested links while keeping both home-link branding and direct `tel:9188090930` action in the brand area.
 - Added above-the-fold hero images to all subpages using existing repository images with descriptive alt text and intrinsic dimensions.
 - Expanded service discoverability links in nav/footer patterns for `/repairs`, `/remodels`, `/drywall-repair`, `/maintenance`, `/structural`, and `/renovation-consultation` (clean URLs only).
 - Updated footer tagline wording from “small-project” to “project” wording across pages.
@@ -874,7 +919,7 @@ Refine homepage final CTA hierarchy and project-fit action links
 ### Summary of Changes
 - Updated homepage final CTA copy for stronger trust-focused framing and added helper line clarifying direct human contact.
 - Added subtle panel styling to final CTA container via new `.homepage-final-cta-panel` class (slightly lighter background, low-opacity border, soft shadow) while preserving layout.
-- Simplified project-fit block by removing buttons and converting inline phrases to actionable links (`Call, text` -> `tel:9188846615`, `email us` -> `schedule.html`) using `.project-fit-links` styling for consistent link behavior.
+- Simplified project-fit block by removing buttons and converting inline phrases to actionable links (`Call, text` -> `tel:9188090930`, `email us` -> `schedule.html`) using `.project-fit-links` styling for consistent link behavior.
 
 ### Risks / Follow-up
 - Project-fit link styling intentionally underlines linked phrases for clarity/accessibility; if a less prominent treatment is preferred, underline intensity can be tuned later.
@@ -1078,7 +1123,7 @@ Create lightweight home maintenance service page
 ### Summary of Changes
 - Added new `maintenance.html` page using the existing service-page shell and styling conventions (hero, content sections, centered CTA, sticky mobile CTA, shared footer block).
 - Implemented requested maintenance-plan messaging with practical, homeowner-friendly tone and no pricing or tier complexity.
-- Structured CTAs to keep the page lightweight and contact-focused: primary `Contact Us` to `schedule.html`, secondary `Call or Text for a Quote` to `tel:9188846615`.
+- Structured CTAs to keep the page lightweight and contact-focused: primary `Contact Us` to `schedule.html`, secondary `Call or Text for a Quote` to `tel:9188090930`.
 
 ### Risks / Follow-up
 - No global navigation links were added in this task per scope; page is ready for routing/linking when you decide where it should be surfaced.
@@ -1094,7 +1139,7 @@ Remove browse-away CTAs from contact page
 
 ### Summary of Changes
 - Removed all `View Services` secondary CTA buttons from `schedule.html` in the main hero CTA row and footer CTA block.
-- Kept the page focused on contact-only conversion actions: Tally form submission and `Call or Text for a Quote` (`tel:9188846615`).
+- Kept the page focused on contact-only conversion actions: Tally form submission and `Call or Text for a Quote` (`tel:9188090930`).
 - Preserved existing section structure and spacing with minimal edits.
 
 ### Risks / Follow-up
@@ -1405,7 +1450,7 @@ Final CTA normalization and footer contact cleanup
 - estimator.html
 
 ### Summary of Changes
-- Standardized CTA language to the final model: primary `Call or Text for a Quote` (`tel:9188846615`) and secondary `Contact Us` (`schedule.html`).
+- Standardized CTA language to the final model: primary `Call or Text for a Quote` (`tel:9188090930`) and secondary `Contact Us` (`schedule.html`).
 - Replaced remaining evaluation/scheduling/availability wording and CTA-style consultation labels with contact-first wording.
 - Reapplied footer contact blocks across the site to ensure no fake form UI remains and both footer actions are consistent.
 
@@ -1435,7 +1480,7 @@ Standardize CTA language and replace non-functional footer form
 
 ### Summary of Changes
 - Replaced non-functional footer form UI on site pages with a clear contact CTA block using the same layout container (`.footer-cta-form`) and two explicit actions.
-- Standardized contact paths so primary CTA text maps to `tel:9188846615` (`Call or Text for a Quote`) and secondary CTA text maps to `schedule.html` (`Get a Quote`/`Contact Us`).
+- Standardized contact paths so primary CTA text maps to `tel:9188090930` (`Call or Text for a Quote`) and secondary CTA text maps to `schedule.html` (`Get a Quote`/`Contact Us`).
 - Updated remaining CTA-style scheduling/availability wording to contact-first wording and kept `schedule.html` as the route-safe main contact page.
 
 ### Risks / Follow-up
@@ -1463,7 +1508,7 @@ Remove calendar-based scheduling flow
 - schedule.html
 
 ### Summary of Changes
-- Replaced all links to `schedule.html` with direct quote/contact paths (`tel:9188846615`) so users are no longer directed to a booking route.
+- Replaced all links to `schedule.html` with direct quote/contact paths (`tel:9188090930`) so users are no longer directed to a booking route.
 - Replaced scheduling-first CTA text with contact-first alternatives such as "Call or Text for a Quote" and "Contact Us".
 - Removed Calendly-based scheduling content by converting `schedule.html` into a route-safe contact handoff page with quote and contact options.
 

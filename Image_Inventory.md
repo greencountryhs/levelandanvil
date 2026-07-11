@@ -2127,7 +2127,7 @@
     > Repaired a ceiling after water damage caused a collapse. Replaced damaged material, installed new drywall, and matched the existing texture for a seamless finish.
     > 
     > 
-    > If you’ve got damage that needs to be fixed properly, call or text 918-884-6615.
+    > If you’ve got damage that needs to be fixed properly, call or text (918) 809-0930.
     > 
     
     ---
