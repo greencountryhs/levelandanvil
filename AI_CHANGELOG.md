@@ -30,6 +30,40 @@ Short task name
 <!-- Add newest entries at the top under this line -->
 
 ### Date
+2026-07-16
+
+### Task
+Implement audit P0/P1: speed, SEO meta/OG, images, favicon, fonts, clean URLs
+
+### Files Changed
+- All public `*.html` pages (meta, OG/Twitter, fonts, favicons, clean URLs, image `srcset`/dimensions, `layout.js` defer)
+- `js/layout.js` (optimized logo assets, clean `/schedule` links, safer ready-state boot, a11y label fixes)
+- `styles.css` (removed Google Fonts `@import`; expanded featured-dot hit target)
+- `sitemap.xml` (selective `lastmod` updates)
+- `favicon.ico`, `images/logo-header.webp`, `images/logo-footer.webp`, `images/favicon-16.png`, `images/favicon-32.png`, `images/apple-touch-icon.png`, `images/og-default.webp`
+- `images/*.webp` priority assets + `images/responsive/*` variants
+- `originals/**` (full-resolution backups), `.vercelignore`, `scripts/apply-p0-p1-html.ps1`
+
+### Summary of Changes
+- Confirmed old phone `918-884-6615` absent from all live production routes and local source (except historical changelog note).
+- Optimized 31 priority images (~76% total weight reduction) with originals preserved outside deploy via `.vercelignore`.
+- Added unique meta descriptions on about/services/repairs/remodels/schedule/reviews/service-area/maintenance.
+- Completed sitewide Open Graph + Twitter Card tags; added real project-based `og-default.webp` (1200x630, letterboxed).
+- Replaced CSS font `@import` with HTML preconnect + stylesheet (`display=swap`).
+- Added favicon set (ico/16/32/apple-touch); shrunk header/footer logos (~127KB PNG → ~1KB WebP).
+- Replaced internal `.html` links with canonical extensionless routes; kept Vercel redirects for old URLs.
+- Improved CLS/a11y: image dimensions/srcset, carousel deferred image loading, larger carousel dot hit areas, header label fixes.
+- `layout.js` loads with `defer` and boots safely whether or not `DOMContentLoaded` already fired.
+
+### Risks / Follow-up
+- Production Lighthouse re-check still needed after deploy (local mobile retest already shows large transfer-size wins).
+- Submit priority URLs in Google Search Console if old phone snippets persist in search results (stale index).
+- Optional future: add `GeneralContractor` as an additional `@type` on the existing LocalBusiness entity (not applied in this pass).
+- OG share image uses dark letterboxing to reach 1200x630 without cropping subject matter; a custom cropped social crop can be added later if desired.
+
+---
+
+### Date
 2026-07-10
 
 ### Task

@@ -1,6 +1,8 @@
 (() => {
   const phoneHref = "tel:9188090930";
   const phoneDisplay = "(918) 809-0930";
+  const logoHeaderSrc = "/images/logo-header.webp";
+  const logoFooterSrc = "/images/logo-footer.webp";
   function normalizePath(pathname) {
     let normalized = pathname || "/";
     if (normalized === "/index.html") return "/";
@@ -120,13 +122,13 @@
       <header class="site-header">
         <div class="container header-inner">
           <div class="logo-group" aria-label="Level and Anvil header branding and contact">
-            <a href="/" class="logo-home-link" aria-label="Level and Anvil home">
-              <img src="/images/logo.png" alt="Level & Anvil Logo" class="logo-img" loading="eager" fetchpriority="high" decoding="async" width="1536" height="1024">
+            <a href="/" class="logo-home-link" aria-label="LEVEL & ANVIL home">
+              <img src="${logoHeaderSrc}" alt="" class="logo-img" loading="eager" decoding="async" width="200" height="134">
               <div class="logo-group-text">
                 <div class="logo-text">LEVEL <span>&</span> ANVIL</div>
               </div>
             </a>
-            <a class="brand-phone" href="${phoneHref}" aria-label="Text a human now at ${phoneDisplay}">
+            <a class="brand-phone" href="${phoneHref}">
               <span class="brand-phone-label">Text a human now:</span>
               <span class="brand-phone-number">${phoneDisplay}</span>
             </a>
@@ -188,7 +190,7 @@
   function renderAppFooter() {
     return `
       <div class="mobile-conversion-bar" role="complementary" aria-label="Mobile contact shortcut">
-        <a href="/schedule.html#project-details-form" class="btn-sticky">Contact Us</a>
+        <a href="/schedule#project-details-form" class="btn-sticky">Contact Us</a>
       </div>
       <footer class="site-footer">
         <div class="container">
@@ -198,12 +200,12 @@
             <p>Call or text for a quote, or use our contact page to share project details.</p>
             <div class="footer-cta-actions">
               <a href="${phoneHref}" class="btn btn-primary">Call or Text for a Quote</a>
-              <a href="/schedule.html#project-details-form" class="btn btn-outline">Contact Us</a>
+              <a href="/schedule#project-details-form" class="btn btn-outline">Contact Us</a>
             </div>
           </div>
           <div class="footer-map">
             <div class="footer-col">
-              <img src="/images/logo.png" alt="Level & Anvil Logo" class="logo-img-footer" loading="lazy" decoding="async" width="1536" height="1024">
+              <img src="${logoFooterSrc}" alt="Level & Anvil Logo" class="logo-img-footer" loading="lazy" decoding="async" width="160" height="107">
               <p class="footer-description">Level & Anvil provides expert solutions across Tulsa and Northeast Oklahoma.</p>
             </div>
             <div class="footer-col">
@@ -283,5 +285,10 @@
     initializeNavigationA11y();
   }
 
-  document.addEventListener("DOMContentLoaded", renderPageShell);
+  // Works with defer: run immediately if DOM is already parsed.
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", renderPageShell);
+  } else {
+    renderPageShell();
+  }
 })();

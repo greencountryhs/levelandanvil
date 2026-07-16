@@ -1,0 +1,312 @@
+﻿[
+    {
+        "Path":  "images/home-renovation-open-living-area-tulsa-ok.webp",
+        "OrigKB":  407.9,
+        "NewKB":  144.6,
+        "W800KB":  48,
+        "OrigPx":  "4000x3000",
+        "NewPx":  "1600 1200",
+        "DefaultMax":  1600,
+        "Stem":  "home-renovation-open-living-area-tulsa-ok"
+    },
+    {
+        "Path":  "images/carpentry-work-miter-saw-cutting-wood.webp",
+        "OrigKB":  680.9,
+        "NewKB":  242.9,
+        "W800KB":  83.3,
+        "OrigPx":  "3024x4032",
+        "NewPx":  "1200 1600",
+        "DefaultMax":  1600,
+        "Stem":  "carpentry-work-miter-saw-cutting-wood"
+    },
+    {
+        "Path":  "images/open-concept-home-remodel-tulsa-ok.webp",
+        "OrigKB":  347.7,
+        "NewKB":  124.5,
+        "W800KB":  37.6,
+        "OrigPx":  "4000x2250",
+        "NewPx":  "1600 900",
+        "DefaultMax":  1600,
+        "Stem":  "open-concept-home-remodel-tulsa-ok"
+    },
+    {
+        "Path":  "images/cedar-privacy-fence-installation-tulsa-ok.webp",
+        "OrigKB":  977.5,
+        "NewKB":  259,
+        "W800KB":  124.6,
+        "OrigPx":  "4000x3000",
+        "NewPx":  "1200 900",
+        "DefaultMax":  1200,
+        "Stem":  "cedar-privacy-fence-installation-tulsa-ok"
+    },
+    {
+        "Path":  "images/brick-fireplace-gas-valve-repair-before-tulsa.webp",
+        "OrigKB":  858.7,
+        "NewKB":  104.7,
+        "W800KB":  52.9,
+        "OrigPx":  "3000x4000",
+        "NewPx":  "900 1200",
+        "DefaultMax":  1200,
+        "Stem":  "brick-fireplace-gas-valve-repair-before-tulsa"
+    },
+    {
+        "Path":  "images/brick-fireplace-repair-gas-valve-replaced-tulsa.webp",
+        "OrigKB":  128.5,
+        "NewKB":  139.9,
+        "W800KB":  96,
+        "OrigPx":  "816x1118",
+        "NewPx":  "816 1118",
+        "DefaultMax":  1200,
+        "Stem":  "brick-fireplace-repair-gas-valve-replaced-tulsa"
+    },
+    {
+        "Path":  "images/ceiling-water-damage-collapse-before-tulsa.webp",
+        "OrigKB":  601.2,
+        "NewKB":  93.8,
+        "W800KB":  38.7,
+        "OrigPx":  "4000x3000",
+        "NewPx":  "1200 900",
+        "DefaultMax":  1200,
+        "Stem":  "ceiling-water-damage-collapse-before-tulsa"
+    },
+    {
+        "Path":  "images/ceiling-repair-drywall-texture-finished-tulsa.webp",
+        "OrigKB":  157.8,
+        "NewKB":  29.8,
+        "W800KB":  12.3,
+        "OrigPx":  "4000x3000",
+        "NewPx":  "1200 900",
+        "DefaultMax":  1200,
+        "Stem":  "ceiling-repair-drywall-texture-finished-tulsa"
+    },
+    {
+        "Path":  "images/yurt-floor-installation-custom-wood-tulsa.webp",
+        "OrigKB":  922.2,
+        "NewKB":  238.8,
+        "W800KB":  113.3,
+        "OrigPx":  "4000x3000",
+        "NewPx":  "1200 900",
+        "DefaultMax":  1200,
+        "Stem":  "yurt-floor-installation-custom-wood-tulsa"
+    },
+    {
+        "Path":  "images/TFS-NonProfit-Jon-cookin-with-kids-over-campfire.webp",
+        "OrigKB":  315.3,
+        "NewKB":  222.9,
+        "W800KB":  127.2,
+        "OrigPx":  "1536x2048",
+        "NewPx":  "900 1200",
+        "DefaultMax":  1200,
+        "Stem":  "tfs-nonprofit-jon-cookin-with-kids-over-campfire"
+    },
+    {
+        "Path":  "images/family-owned-handyman-business-tulsa.webp",
+        "OrigKB":  134.4,
+        "NewKB":  81.3,
+        "W800KB":  44.6,
+        "OrigPx":  "1153x2048",
+        "NewPx":  "676 1200",
+        "DefaultMax":  1200,
+        "Stem":  "family-owned-handyman-business-tulsa"
+    },
+    {
+        "Path":  "images/custom-fireplace-feature-wall-jenks-ok.webp",
+        "OrigKB":  322.2,
+        "NewKB":  78,
+        "W800KB":  39.4,
+        "OrigPx":  "3024x4032",
+        "NewPx":  "900 1200",
+        "DefaultMax":  1200,
+        "Stem":  "custom-fireplace-feature-wall-jenks-ok"
+    },
+    {
+        "Path":  "images/custom-tv-feature-wall-modern-design-jenks-ok.webp",
+        "OrigKB":  301.7,
+        "NewKB":  80.4,
+        "W800KB":  41.4,
+        "OrigPx":  "3024x4032",
+        "NewPx":  "900 1200",
+        "DefaultMax":  1200,
+        "Stem":  "custom-tv-feature-wall-modern-design-jenks-ok"
+    },
+    {
+        "Path":  "images/custom-wood-frame-construction-geometric-design.webp",
+        "OrigKB":  120.6,
+        "NewKB":  124.7,
+        "W800KB":  73.2,
+        "OrigPx":  "1080x1318",
+        "NewPx":  "983 1200",
+        "DefaultMax":  1200,
+        "Stem":  "custom-wood-frame-construction-geometric-design"
+    },
+    {
+        "Path":  "images/custom-woodworking-shop-project-tulsa.webp",
+        "OrigKB":  103.1,
+        "NewKB":  110.8,
+        "W800KB":  91.2,
+        "OrigPx":  "960x720",
+        "NewPx":  "960 720",
+        "DefaultMax":  1200,
+        "Stem":  "custom-woodworking-shop-project-tulsa"
+    },
+    {
+        "Path":  "images/home-renovation-before-living-room-tulsa.webp",
+        "OrigKB":  211.6,
+        "NewKB":  49.7,
+        "W800KB":  25.7,
+        "OrigPx":  "4000x3000",
+        "NewPx":  "1200 900",
+        "DefaultMax":  1200,
+        "Stem":  "home-renovation-before-living-room-tulsa"
+    },
+    {
+        "Path":  "images/open-concept-remodel-before-wall-removal-tulsa.webp",
+        "OrigKB":  222.6,
+        "NewKB":  47,
+        "W800KB":  21.5,
+        "OrigPx":  "4000x3000",
+        "NewPx":  "1200 900",
+        "DefaultMax":  1200,
+        "Stem":  "open-concept-remodel-before-wall-removal-tulsa"
+    },
+    {
+        "Path":  "images/projects/Visiting-Angels-French-Drain/French-drain-After-repair-cherry-street-concrete-cutting.webp",
+        "OrigKB":  1228.6,
+        "NewKB":  293.8,
+        "W800KB":  129.3,
+        "OrigPx":  "4000x3000",
+        "NewPx":  "1200 900",
+        "DefaultMax":  1200,
+        "Stem":  "french-drain-after-repair-cherry-street-concrete-cutting"
+    },
+    {
+        "Path":  "images/projects/tulsa-full-home-remodel/AKitchen20220316_202339_result.webp",
+        "OrigKB":  686.7,
+        "NewKB":  109.3,
+        "W800KB":  52.1,
+        "OrigPx":  "3000x4000",
+        "NewPx":  "900 1200",
+        "DefaultMax":  1200,
+        "Stem":  "akitchen20220316_202339_result"
+    },
+    {
+        "Path":  "images/projects/tulsa-full-home-remodel/AKitchen20220316_202356_result.webp",
+        "OrigKB":  975.1,
+        "NewKB":  156.7,
+        "W800KB":  71.5,
+        "OrigPx":  "4000x3000",
+        "NewPx":  "1200 900",
+        "DefaultMax":  1200,
+        "Stem":  "akitchen20220316_202356_result"
+    },
+    {
+        "Path":  "images/projects/tulsa-full-home-remodel/AKitchen20220316_202153_result.webp",
+        "OrigKB":  580.6,
+        "NewKB":  83,
+        "W800KB":  38.3,
+        "OrigPx":  "4000x3000",
+        "NewPx":  "1200 900",
+        "DefaultMax":  1200,
+        "Stem":  "akitchen20220316_202153_result"
+    },
+    {
+        "Path":  "images/projects/tulsa-full-home-remodel/akitchen-remodel-white-cabinets-island-tulsa.webp",
+        "OrigKB":  306.7,
+        "NewKB":  73.6,
+        "W800KB":  36.4,
+        "OrigPx":  "4000x3000",
+        "NewPx":  "1200 900",
+        "DefaultMax":  1200,
+        "Stem":  "akitchen-remodel-white-cabinets-island-tulsa"
+    },
+    {
+        "Path":  "images/projects/tulsa-full-home-remodel/bkitchen-remodel-before-tulsa-1.webp",
+        "OrigKB":  415.4,
+        "NewKB":  106.7,
+        "W800KB":  54.7,
+        "OrigPx":  "4000x3000",
+        "NewPx":  "1200 900",
+        "DefaultMax":  1200,
+        "Stem":  "bkitchen-remodel-before-tulsa-1"
+    },
+    {
+        "Path":  "images/projects/tulsa-full-home-remodel/bopen-concept-remodel-before-wall-removal-tulsa.webp",
+        "OrigKB":  222.6,
+        "NewKB":  47,
+        "W800KB":  21.5,
+        "OrigPx":  "4000x3000",
+        "NewPx":  "1200 900",
+        "DefaultMax":  1200,
+        "Stem":  "bopen-concept-remodel-before-wall-removal-tulsa"
+    },
+    {
+        "Path":  "images/projects/tulsa-full-home-remodel/ahome-renovation-open-living-area-tulsa-ok.webp",
+        "OrigKB":  407.9,
+        "NewKB":  97.4,
+        "W800KB":  48,
+        "OrigPx":  "4000x3000",
+        "NewPx":  "1200 900",
+        "DefaultMax":  1200,
+        "Stem":  "ahome-renovation-open-living-area-tulsa-ok"
+    },
+    {
+        "Path":  "images/projects/tulsa-full-home-remodel/ABath20220319_111822_result.webp",
+        "OrigKB":  710.8,
+        "NewKB":  125.4,
+        "W800KB":  60.3,
+        "OrigPx":  "3000x4000",
+        "NewPx":  "900 1200",
+        "DefaultMax":  1200,
+        "Stem":  "abath20220319_111822_result"
+    },
+    {
+        "Path":  "images/projects/tulsa-full-home-remodel/ABath1_c1732261-4519-484a-86b1-356a95fc3715.webp",
+        "OrigKB":  385.4,
+        "NewKB":  96.6,
+        "W800KB":  50.7,
+        "OrigPx":  "4000x3000",
+        "NewPx":  "1200 900",
+        "DefaultMax":  1200,
+        "Stem":  "abath1_c1732261-4519-484a-86b1-356a95fc3715"
+    },
+    {
+        "Path":  "images/projects/tulsa-full-home-remodel/AHall20220319_111809_result.webp",
+        "OrigKB":  635.9,
+        "NewKB":  59.1,
+        "W800KB":  28.2,
+        "OrigPx":  "3000x4000",
+        "NewPx":  "900 1200",
+        "DefaultMax":  1200,
+        "Stem":  "ahall20220319_111809_result"
+    },
+    {
+        "Path":  "images/projects/tulsa-full-home-remodel/AShower20220319_111650_result.webp",
+        "OrigKB":  386.6,
+        "NewKB":  47.2,
+        "W800KB":  23.3,
+        "OrigPx":  "3000x4000",
+        "NewPx":  "900 1200",
+        "DefaultMax":  1200,
+        "Stem":  "ashower20220319_111650_result"
+    },
+    {
+        "Path":  "images/projects/tulsa-full-home-remodel/AShower20220319_111712_result.webp",
+        "OrigKB":  597.7,
+        "NewKB":  86.1,
+        "W800KB":  36.8,
+        "OrigPx":  "3000x4000",
+        "NewPx":  "900 1200",
+        "DefaultMax":  1200,
+        "Stem":  "ashower20220319_111712_result"
+    },
+    {
+        "Path":  "images/projects/tulsa-full-home-remodel/pShowerIMG_20211129_124118169_result.webp",
+        "OrigKB":  634.1,
+        "NewKB":  104.6,
+        "W800KB":  50.3,
+        "OrigPx":  "3000x4000",
+        "NewPx":  "900 1200",
+        "DefaultMax":  1200,
+        "Stem":  "pshowerimg_20211129_124118169_result"
+    }
+]
