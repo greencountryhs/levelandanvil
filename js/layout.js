@@ -228,6 +228,7 @@
               <ul class="footer-links">
                 <li><a href="/process">Our Process</a></li>
                 <li><a href="/about">About</a></li>
+                <li><a href="/portfolio">Our Work</a></li>
                 <li><a href="/reviews">Reviews</a></li>
                 <li><a href="/service-area">Service Area</a></li>
                 <li><a href="/schedule">Contact Us</a></li>

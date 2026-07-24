@@ -33,6 +33,34 @@ Short task name
 2026-07-23
 
 ### Task
+PR #1 minor copy/nav polish after review
+
+### Files Changed
+- `index.html`
+- `drywall-repair.html`
+- `exterior-repairs.html`
+- `outdoor-spaces.html`
+- `about.html`
+- `js/layout.js`
+- `AI_CHANGELOG.md`
+
+### Summary of Changes
+- Homepage H1 trimmed to remove trailing slogan.
+- Drywall process step rewritten without “not just” contrast; restored quiet maintenance-plan link near CTA.
+- Exterior evaluation intro shortened; internal missing-photo audit comment kept.
+- Footer Company links now include Our Work → `/portfolio`.
+- Outdoor page `<title>` no longer uses “Premium Fencing.”
+- Fixed about.html title indentation.
+
+### Risks / Follow-up
+- Still not merged or deployed pending final approval.
+
+---
+
+### Date
+2026-07-23
+
+### Task
 Phase 1 brand proof: drywall before/after, exterior image honesty, Our Work nav, em dashes, limited voice cleanup
 
 ### Files Changed
