@@ -30,6 +30,73 @@ Short task name
 <!-- Add newest entries at the top under this line -->
 
 ### Date
+2026-07-23
+
+### Task
+PR #1 minor copy/nav polish after review
+
+### Files Changed
+- `index.html`
+- `drywall-repair.html`
+- `exterior-repairs.html`
+- `outdoor-spaces.html`
+- `about.html`
+- `js/layout.js`
+- `AI_CHANGELOG.md`
+
+### Summary of Changes
+- Homepage H1 trimmed to remove trailing slogan.
+- Drywall process step rewritten without “not just” contrast; restored quiet maintenance-plan link near CTA.
+- Exterior evaluation intro shortened; internal missing-photo audit comment kept.
+- Footer Company links now include Our Work → `/portfolio`.
+- Outdoor page `<title>` no longer uses “Premium Fencing.”
+- Fixed about.html title indentation.
+
+### Risks / Follow-up
+- Still not merged or deployed pending final approval.
+
+---
+
+### Date
+2026-07-23
+
+### Task
+Phase 1 brand proof: drywall before/after, exterior image honesty, Our Work nav, em dashes, limited voice cleanup
+
+### Files Changed
+- `drywall-repair.html`
+- `exterior-repairs.html`
+- `outdoor-spaces.html`
+- `index.html`
+- `about.html`
+- `services.html`
+- `repairs.html`
+- `remodels.html`
+- `structural.html`
+- `maintenance.html`
+- `custom-builds.html`
+- `portfolio.html`
+- `js/layout.js`
+- `styles.css`
+- `robots.txt`
+- `AI_CHANGELOG.md`
+
+### Summary of Changes
+- Drywall page now shows a verified ceiling water-damage before/after pair with accurate labels, captions, responsive srcset, and a link to `/portfolio#drywall`.
+- Exterior page removed interior fireplace/gas-valve photos presented as exterior work; replaced with honest text-first evaluation plus drainage/fence photos that match captions; HTML audit note for missing soffit/fascia/siding photos.
+- Added top-level **Our Work** nav to `/portfolio`; renamed About child from Common Philosophy to About; added portfolio section IDs and contextual service-page portfolio links.
+- Removed all em dashes from customer-facing HTML/JS/CSS and robots.txt comment.
+- Limited voice cleanup on homepage meta/H1/CTAs, services lead, outdoor/exterior language, custom-builds “design-forward,” and drywall H1/trust boilerplate.
+- Preserved afa9fbc technical improvements (srcset, OG, schema, clean URLs, favicons, deferred layout.js).
+
+### Risks / Follow-up
+- Still need dedicated soffit/fascia/siding/paint-prep project photos for exterior-repairs.html.
+- Full-site voice rewrite, services highlights restore from 047c7b9, and shower “Before” label accuracy remain deferred.
+- Do not deploy until Phase 1 review/screenshots approved.
+
+---
+
+### Date
 2026-07-16
 
 ### Task

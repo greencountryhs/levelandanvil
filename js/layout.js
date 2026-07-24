@@ -30,6 +30,9 @@
         "/drywall-repair",
         "/maintenance",
         "/renovation-consultation",
+        "/outdoor-spaces",
+        "/exterior-repairs",
+        "/custom-builds",
         "/projects/tulsa-full-home-remodel",
       ],
       children: [
@@ -41,13 +44,14 @@
         { href: "/renovation-consultation", label: "Renovation Consultation" },
       ],
     },
+    { href: "/portfolio", label: "Our Work", match: ["/portfolio"] },
     { href: "/process", label: "Process", match: ["/process"] },
     {
       href: "/about",
       label: "About",
       match: ["/about", "/reviews", "/service-area"],
       children: [
-        { href: "/about", label: "Common Philosophy" },
+        { href: "/about", label: "About" },
         { href: "/reviews", label: "Reviews" },
         { href: "/service-area", label: "Service Area" },
       ],
@@ -224,6 +228,7 @@
               <ul class="footer-links">
                 <li><a href="/process">Our Process</a></li>
                 <li><a href="/about">About</a></li>
+                <li><a href="/portfolio">Our Work</a></li>
                 <li><a href="/reviews">Reviews</a></li>
                 <li><a href="/service-area">Service Area</a></li>
                 <li><a href="/schedule">Contact Us</a></li>
