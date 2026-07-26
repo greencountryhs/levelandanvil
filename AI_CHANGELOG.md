@@ -30,6 +30,44 @@ Short task name
 <!-- Add newest entries at the top under this line -->
 
 ### Date
+2026-07-26
+
+### Task
+Update business phone and public email
+
+### Files Changed
+- js/layout.js
+- index.html
+- about.html
+- drywall-repair.html
+- services.html
+- exterior-repairs.html
+- estimator.html
+- remodels.html
+- schedule.html
+- maintenance.html
+- repairs.html
+- outdoor-spaces.html
+- service-area.html
+- structural.html
+- reviews.html
+- projects/tulsa-full-home-remodel.html
+- Image_Inventory.md
+- AI_CHANGELOG.md
+
+### Summary of Changes
+- Replaced phone `918-809-0930` / `(918) 809-0930` / `tel:9188090930` with `918-808-2637` / `tel:+19188082637` across site pages, shared layout, JSON-LD, and inventory note.
+- Replaced public business email `levelandanvil@gmail.com` with `jon@levelandanvil.com` / `mailto:jon@levelandanvil.com` on the contact page.
+- No copy, layout, styling, or unrelated code changes.
+
+### Risks / Follow-up
+- Historical mentions of the prior phone number remain in older `AI_CHANGELOG.md` entries only.
+- No `sms:` links existed in the repo; none were added.
+- No package/build script available for validation on this static site.
+
+---
+
+### Date
 2026-07-23
 
 ### Task

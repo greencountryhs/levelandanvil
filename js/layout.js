@@ -1,6 +1,6 @@
 (() => {
-  const phoneHref = "tel:9188090930";
-  const phoneDisplay = "(918) 809-0930";
+  const phoneHref = "tel:+19188082637";
+  const phoneDisplay = "918-808-2637";
   const logoHeaderSrc = "/images/logo-header.webp";
   const logoFooterSrc = "/images/logo-footer.webp";
   function normalizePath(pathname) {
