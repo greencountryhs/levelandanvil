@@ -33,6 +33,116 @@ Short task name
 2026-07-26
 
 ### Task
+Pre-commit portfolio visual review adjustments
+
+### Files Changed
+- portfolio.html
+- AI_CHANGELOG.md
+
+### Summary of Changes
+- Trimmed top before-and-after showcase from six pairs to four (kitchen, open-concept, ceiling, fireplace) to shorten the path to category sections.
+- Moved bathroom before-and-after into `#remodeling` and kept French drain before-and-after in `#structural-water` only.
+- Removed exact kitchen/bath after card duplicates from the remodel gallery and removed the open-concept pair duplicate from `#structural-water`.
+- Restored light background on `#structural-water` so it does not sit against another dark section.
+
+### Risks / Follow-up
+- Fireplace and ceiling pairs still also appear in `#repairs` / `#drywall` for deep-link users.
+- Hallway and shop/woodworking images still intentionally appear in more than one category section.
+- Kitchen before/after aspect ratios differ (landscape vs portrait); layout aligns to top by design.
+
+### Date
+2026-07-26
+
+### Task
+Fix malformed main-nav CSS that broke portfolio grid rules
+
+### Files Changed
+- styles.css
+- AI_CHANGELOG.md
+
+### Summary of Changes
+- Ensured the nav hover/active block is valid closed rules only:
+  `.main-nav a:hover { color: var(--color-primary); }` and
+  `.main-nav a.active { color: var(--color-text-dim); }`.
+- Confirmed stray incomplete selector text `.main-nav a:hover,\n.main-nav a.active {` is absent.
+- Confirmed brace balance (217/217) and no malformed selector-open blocks.
+- Left desktop-specific `.main-nav ul > li > a:not(.btn).active` unchanged.
+- After cache-disabled stylesheet reload, `.before-after-pair` computes to `display: grid` (desktop two columns; mobile one column).
+
+### Risks / Follow-up
+- Earlier `pairStyle: none` / `display: block` was consistent with a cached CSS parse after an incomplete nav selector; hard-refresh/cache-disable is required after stylesheet syntax fixes.
+- None otherwise.
+
+### Date
+2026-07-26
+
+### Task
+Emphasize before-and-after portfolio experience
+
+### Files Changed
+- portfolio.html
+- index.html
+- styles.css
+- AI_CHANGELOG.md
+
+### Summary of Changes
+- Reframed `/portfolio` as a full before-and-after project portfolio with hero heading “Before & After Project Portfolio” and eyebrow “See the Difference”.
+- Added a top intro section with category jump links and six genuine labeled Before/After pairs (kitchen, open-concept living, bathroom, ceiling drywall, fireplace gas valve, French drain).
+- Kept existing section anchors (`#remodeling`, `#repairs`, `#drywall`, `#doors-trim`, `#structural-water`, `#custom-builds`) and repeated relevant BA pairs inside matching categories where honest.
+- Added homepage CTA “View More Before & Afters” linking to `/portfolio`.
+- Added shared `.before-after-pair` / `.ba-label` / portfolio intro styles with mobile stacking.
+
+### Risks / Follow-up
+- `#doors-trim` and `#custom-builds` still have no genuine before photos.
+- Shower progress→finish photos were not labeled as a Before/After pair (process shot, not a true room before).
+- Some finished images intentionally appear in more than one section (e.g. hallway, open-concept pair, woodworking).
+- Cherry Street “before” image has no responsive `srcset` variants yet.
+
+### Date
+2026-07-26
+
+### Task
+Replace Interior Repairs excavator image
+
+### Files Changed
+- portfolio.html
+- AI_CHANGELOG.md
+
+### Summary of Changes
+- In the portfolio `#doors-trim` (Doors / Trim / Interior Repairs) section, replaced `family-owned-handyman-business-tulsa.webp` (excavator with child) with finished hallway photo `AHall20220319_111809_result.webp` plus existing responsive variants.
+- Updated alt text and figcaption to describe the finished doors/trim/flooring hallway without unsupported claims.
+- Left other uses of the excavator image (About, Schedule, Maintenance, Services maintenance card, portfolio general Repairs section) unchanged because they are not labeled as Interior Repairs.
+
+### Risks / Follow-up
+- The excavator image still appears elsewhere as a family/owner photo; only the Interior Repairs portfolio association was removed.
+- Homepage “Doors, Trim & Interior Repairs” card still uses the in-progress miter-saw carpentry photo (not the excavator); optional follow-up if that should also become a finished-interior shot.
+
+---
+
+### Date
+2026-07-26
+
+### Task
+Desktop header phone spacing and Home nav color
+
+### Files Changed
+- styles.css
+- AI_CHANGELOG.md
+
+### Summary of Changes
+- Desktop-only (`min-width: 851px`) header spacing: keep brand phone near the logo and add padding/gap so it is clearly separated from the main nav.
+- Desktop main-nav `.active` links (including Home) now use the default nav color (`--color-text-dim`) instead of brand gold, so they no longer match `.brand-phone`.
+- Phone accent color unchanged; mobile header rules under `max-width: 850px` left as-is.
+
+### Risks / Follow-up
+- Active desktop nav pages no longer use gold text; `aria-current` remains for accessibility. Hover still uses brand gold.
+
+---
+
+### Date
+2026-07-26
+
+### Task
 Update business phone and public email
 
 ### Files Changed
