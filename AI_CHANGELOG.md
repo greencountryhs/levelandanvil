@@ -30,6 +30,65 @@ Short task name
 <!-- Add newest entries at the top under this line -->
 
 ### Date
+2026-07-28
+
+### Task
+Add Privacy Policy page and footer link
+
+### Files Changed
+- privacy.html
+- js/layout.js
+- sitemap.xml
+- styles.css
+- AI_CHANGELOG.md
+
+### Summary of Changes
+- Created `/privacy` (`privacy.html`) with the approved Privacy Policy content, standard metadata, and the sitewide Google tag (`G-7XMK4XGSRR`).
+- Linked Google’s partner-sites privacy explanation from the Website and Analytics Information section.
+- Added a shared footer “Privacy Policy” link in `js/layout.js` under Company.
+- Added `/privacy` to `sitemap.xml`.
+- Added minimal `.legal-content` list/link styles so policy lists remain readable under the global `ul { list-style: none; }` reset.
+### Risks / Follow-up
+- Local static servers without Vercel `cleanUrls` require `/privacy.html`; production uses `/privacy`.
+- Schedule page embeds a Tally.so form; covered generically under contact-form providers in the policy.
+
+### Date
+2026-07-28
+
+### Task
+Add Google Analytics Google tag sitewide
+
+### Files Changed
+- about.html
+- custom-builds.html
+- drywall-repair.html
+- estimator.html
+- exterior-repairs.html
+- index.html
+- maintenance.html
+- outdoor-spaces.html
+- portfolio.html
+- process.html
+- projects/tulsa-full-home-remodel.html
+- remodels.html
+- renovation-consultation.html
+- repairs.html
+- reviews.html
+- schedule.html
+- service-area.html
+- services.html
+- structural.html
+- AI_CHANGELOG.md
+
+### Summary of Changes
+- Inserted the Google tag (gtag.js) for measurement ID `G-7XMK4XGSRR` immediately after the opening `<head>` tag on every public HTML page.
+- No prior Google Analytics / gtag implementations were present, so nothing was replaced.
+
+### Risks / Follow-up
+- Confirm in Google Analytics Realtime that production traffic is received after deploy.
+- None otherwise.
+
+### Date
 2026-07-26
 
 ### Task
