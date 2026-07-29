@@ -232,6 +232,7 @@
                 <li><a href="/reviews">Reviews</a></li>
                 <li><a href="/service-area">Service Area</a></li>
                 <li><a href="/schedule">Contact Us</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
               </ul>
             </div>
             <div class="footer-col">
